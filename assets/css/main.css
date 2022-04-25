@@ -554,7 +554,6 @@ body {
   margin: 0 auto; }
 
 .header {
-  background-color: var(--blue);
   position: absolute;
   top: 0;
   left: 0;
@@ -575,7 +574,7 @@ body {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.67;
-  color: #ffffff; }
+  color: var(--white-text); }
 
 .menu__list {
   display: flex;
@@ -588,5 +587,12 @@ body {
   font-size: 1.5rem;
   line-height: 1.25;
   color: var(--white-text); }
+
+.intro {
+  background: url("../images/backgrounds/intro.png") center center no-repeat;
+  background-size: cover; }
+
+.intro__container {
+  padding-top: 5.625rem; }
 
 /*# sourceMappingURL=main.css.map */

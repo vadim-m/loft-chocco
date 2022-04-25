@@ -2,7 +2,7 @@
   @include alegreya(400);
   font-size: rem(18);
   line-height: 1.67;
-  color: #ffffff;
+  color: var(--white-text);
 }
 
 .menu__list {
