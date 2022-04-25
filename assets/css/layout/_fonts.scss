@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/AlegreyaSans-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Миксин для добавления шрифта
+@mixin alegreya($weight: 400, $style: "norm") {
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+
+  // style
+  @if $style == "it" {
+    font-style: italic;
+  } @else {
+    font-style: normal;
+  }
+
+  // thin
+  @if $weight == 300 {
+    font-weight: 300;
+  }
+  // normal
+  @if $weight == 400 {
+    font-weight: 400;
+  }
+  // medium
+  @if $weight == 500 {
+    font-weight: 500;
+  }
+  // bold
+  @if $weight == 700 {
+    font-weight: 700;
+  }
+  // extrabold
+  @if $weight == 800 {
+    font-weight: 800;
+  }
+  // black
+  @if $weight == 900 {
+    font-weight: 900;
+  }
+}

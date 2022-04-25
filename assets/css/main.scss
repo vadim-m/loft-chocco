@@ -1,0 +1,18 @@
+:root {
+  //text colors
+  --black-text: #000;
+  --grey-text: #666666;
+  --white-text: #fff;
+  // colors
+  --blue: #5fc4d9;
+  --green: #135a46;
+  --grey: #f6faf9;
+}
+
+//normalize
+@import "./layout/_normalize.scss";
+
+// setups
+@import "./mixins/_mixins.scss";
+@import "./layout/_fonts.scss";
+@import "./layout/_layout.scss";
