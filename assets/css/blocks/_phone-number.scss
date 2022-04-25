@@ -1,0 +1,6 @@
+.phone-number {
+  @include alegreya(400);
+  font-size: rem(24);
+  line-height: 1.25;
+  color: var(--white-text);
+}

@@ -1,0 +1,11 @@
+.menu {
+  @include alegreya(400);
+  font-size: rem(18);
+  line-height: 1.67;
+  color: #ffffff;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+}

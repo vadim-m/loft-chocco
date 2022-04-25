@@ -79,12 +79,24 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
+
+  position: relative;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
 }
 
 .container {
-  width: 940px;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  // 940 + 15 + 15
+  max-width: 970px;
 
+  padding: 0 15px;
   margin: 0 auto;
 }

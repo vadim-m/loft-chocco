@@ -1,0 +1,19 @@
+.header {
+  background-color: var(--blue);
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  height: rem(90);
+}
+
+.header__menu {
+  flex-grow: 1;
+  padding: 0 3vw;
+}
