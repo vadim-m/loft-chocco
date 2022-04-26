@@ -29,24 +29,68 @@
             <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
           </ul>
         </nav>
-        <span class="header__contants phone-number"><a class="phone-number" href="tel:+78009039090">8 800 903
-            9090</a></span>
+        <div class="header__contants phone-number"><svg class="icon phone-number__icon">
+            <use xlink:href="./assets/images/icons/sprite.svg#phone"></use>>
+          </svg><a class="phone-number__tel" href="tel:+78009039090">8 800 903
+            9090</a></div>
       </div>
     </header>
 
     <main class="content">
       <section class="section intro">
         <div class="container intro__container">
+
           <div class="intro__content">
-            <div class="section-title intro__title">Натуральный шоколадные батончики</div>
-            <div class="intro__desc">Наши баточники идеально подходят для тех, кто следит за своим здоровьем.</div>
-            <button type="button" class="btn intro__button">Заказать</button>
+
+            <div class="intro__text">
+              <div class="section-title intro__title">Натуральные шоколадные батончики</div>
+              <div class="intro__desc">Наши баточники идеально подходят для тех, кто следит за своим здоровьем.</div>
+              <button type="button" class="btn intro__button">Заказать</button>
+            </div>
+
+            <div class="intro__features features">
+
+              <div class="features__item">
+                <svg class="icon features__icon">
+                  <use xlink:href="./assets/images/icons/sprite.svg#intro-1"></use>>
+                </svg>
+                <div class="features__text">100% натуральный продукт</div>
+              </div>
+              <div class="features__item">
+                <svg class="icon features__icon">
+                  <use xlink:href="./assets/images/icons/sprite.svg#intro-2"></use>>
+                </svg>
+                <div class="features__text">3 - 5 дней доставка по РФ</div>
+              </div>
+              <div class="features__item">
+                <svg class="icon features__icon">
+                  <use xlink:href="./assets/images/icons/sprite.svg#intro-3"></use>>
+                </svg>
+                <div class="features__text">не портит фигуру</div>
+              </div>
+
+            </div>
+
           </div>
+
           <div class="intro__photo">
-            <img src="" alt="Chocco photo">
+            <img class="intro__img" src="./assets/images/intro/bars.png" alt="Chocco photo">
           </div>
+
+          <div class="intro__decor">
+            <div class="intro__sheet">
+              <img src="./assets/images/intro/sheet.png" alt="sheet">
+            </div>
+            <div class="intro__berries">
+              <img src="./assets/images/intro/berries.png" alt="sheet">
+            </div>
+          </div>
+
         </div>
+
+
       </section>
+      <section class="section advantages"></section>
     </main>
 
   </div>

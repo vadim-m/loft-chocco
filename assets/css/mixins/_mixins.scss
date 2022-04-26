@@ -10,6 +10,12 @@
   @return $emValue;
 }
 
+// // Функция для расчета line-height
+@function lh($value, $font) {
+  $lineHeightValue: ($value / $font);
+  @return $lineHeightValue;
+}
+
 @mixin placecolor($color: #000000) {
   &::-webkit-input-placeholder {
     color: $color;

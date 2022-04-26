@@ -2,11 +2,13 @@
   //text colors
   --black-text: #000;
   --grey-text: #666666;
+  --green-text: #135a46;
   --white-text: #fff;
   // colors
   --blue: #5fc4d9;
-  --green: #135a46;
   --grey: #f6faf9;
+  --green: #135a46;
+  --white: #fff;
 }
 
 //normalize
@@ -22,3 +24,4 @@
 @import "./blocks/_menu";
 @import "./blocks/_phone-number";
 @import "./blocks/_intro";
+@import "./blocks/_features";

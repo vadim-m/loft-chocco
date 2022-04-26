@@ -1,0 +1,23 @@
+.features {
+  display: flex;
+}
+
+.features__item {
+  display: flex;
+}
+
+.features__icon {
+  width: rem(48);
+  height: rem(40);
+  fill: var(--white);
+
+  margin-right: rem(8);
+}
+
+.features__text {
+  max-width: rem(86);
+  font-size: rem(16);
+  @include alegreya(400);
+  color: var(--white);
+  line-height: lh(18, 16);
+}

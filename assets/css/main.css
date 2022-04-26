@@ -1,10 +1,12 @@
 :root {
   --black-text: #000;
   --grey-text: #666666;
+  --green-text: #135a46;
   --white-text: #fff;
   --blue: #5fc4d9;
+  --grey: #f6faf9;
   --green: #135a46;
-  --grey: #f6faf9; }
+  --white: #fff; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -540,6 +542,12 @@ body {
   overflow: hidden;
   position: relative; }
 
+.container {
+  width: 100%;
+  max-width: 970px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
 .content {
   flex-grow: 1; }
 
@@ -547,14 +555,45 @@ body {
   height: 100vh;
   min-height: 650px; }
 
-.container {
-  width: 100%;
-  max-width: 970px;
-  padding: 0 15px;
-  margin: 0 auto; }
+.section-title {
+  font-size: 3rem;
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--white-text);
+  text-transform: uppercase; }
+  .section-title--black {
+    color: var(--black-text); }
+  .section-title--green {
+    color: var(--green-text); }
+
+.btn {
+  font-size: 1.1875rem;
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  color: var(--green-text);
+  line-height: 1;
+  text-transform: uppercase;
+  align-self: flex-start;
+  background-color: var(--white);
+  border-radius: 30px;
+  padding: 1.25rem 2.25rem;
+  transition: all 0.2s linear; }
+  .btn:hover {
+    background-color: var(--green);
+    color: var(--white-text); }
+  .btn--green {
+    background-color: var(--green);
+    color: var(--white-text); }
+  .btn--green:hover {
+    background-color: var(--white);
+    color: var(--green-text); }
 
 .header {
   position: absolute;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%; }
@@ -562,7 +601,7 @@ body {
 .header__container {
   display: flex;
   align-items: center;
-  height: 5.625rem; }
+  height: 6rem; }
 
 .header__menu {
   flex-grow: 1;
@@ -573,12 +612,15 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 1.125rem;
-  line-height: 1.67;
+  line-height: 1.6666666667;
   color: var(--white-text); }
 
 .menu__list {
   display: flex;
   justify-content: space-between; }
+
+.menu__item:hover {
+  color: var(--green-text); }
 
 .phone-number {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
@@ -586,13 +628,95 @@ body {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.25;
-  color: var(--white-text); }
+  color: var(--white-text);
+  display: flex;
+  align-items: center; }
+  .phone-number:hover {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); }
+  .phone-number__icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    fill: var(--white-text); }
 
 .intro {
   background: url("../images/backgrounds/intro.png") center center no-repeat;
   background-size: cover; }
+  .intro__container {
+    display: flex;
+    height: 100%;
+    position: relative;
+    padding-top: 5.625rem; }
 
-.intro__container {
-  padding-top: 5.625rem; }
+.intro__content {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap; }
+
+.intro__text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: end; }
+
+.intro__title {
+  max-width: 22rem;
+  margin-bottom: 0.7916666667em; }
+
+.intro__desc {
+  max-width: 22rem;
+  font-size: 1.3125rem;
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4285714286;
+  color: var(--white-text);
+  margin-bottom: 1.5238095238em; }
+
+.intro__features {
+  align-self: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 6vh; }
+
+.intro__photo {
+  width: 50%;
+  display: flex; }
+
+.intro__img {
+  object-fit: contain; }
+
+.intro__sheet {
+  width: 6%;
+  position: absolute;
+  left: -2%;
+  bottom: -4%; }
+
+.intro__berries {
+  position: absolute;
+  width: 40%;
+  right: 0%;
+  bottom: -5%; }
+
+.features {
+  display: flex; }
+
+.features__item {
+  display: flex; }
+
+.features__icon {
+  width: 3rem;
+  height: 2.5rem;
+  fill: var(--white);
+  margin-right: 0.5rem; }
+
+.features__text {
+  max-width: 5.375rem;
+  font-size: 1rem;
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.125; }
 
 /*# sourceMappingURL=main.css.map */

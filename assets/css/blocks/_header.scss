@@ -1,5 +1,6 @@
 .header {
   position: absolute;
+  z-index: 5;
 
   top: 0;
   left: 0;
@@ -9,7 +10,7 @@
 .header__container {
   display: flex;
   align-items: center;
-  height: rem(90);
+  height: rem(96);
 }
 
 .header__menu {
