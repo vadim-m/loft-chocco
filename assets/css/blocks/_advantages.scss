@@ -3,13 +3,13 @@
 }
 
 .advantages__item {
-  width: 33.33333%;
+  flex: 1;
   position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
 
-  padding: 0 1.25rem;
+  padding: 0 2%;
 
   &:not(:last-child):after {
     content: "";

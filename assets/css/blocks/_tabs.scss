@@ -1,0 +1,26 @@
+.tabs__item {
+  width: 12vmin;
+  height: 12vmin;
+  overflow: hidden;
+
+  border: 4px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: border 0.12s;
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  &:hover,
+  &--active {
+    border: 4px solid var(--green);
+  }
+}
+
+.tabs__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

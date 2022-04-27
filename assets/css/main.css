@@ -755,12 +755,12 @@ body {
   display: flex; }
 
 .advantages__item {
-  width: 33.33333%;
+  flex: 1;
   position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 0 1.25rem; }
+  padding: 0 2%; }
   .advantages__item:not(:last-child):after {
     content: "";
     display: block;
@@ -805,7 +805,120 @@ body {
   line-height: 1.3333333333;
   color: var(--grey-text); }
 
-.bars {
-  background-color: antiquewhite; }
+.reviews__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.reviews__title {
+  z-index: 5;
+  margin-bottom: 7vh; }
+
+.reviews__wrapper {
+  background-color: var(--grey);
+  position: relative;
+  padding: 5%;
+  margin-bottom: 2rem; }
+  .reviews__wrapper::before {
+    content: "";
+    display: block;
+    width: 10vmin;
+    height: 10vmin;
+    background-color: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%); }
+  .reviews__wrapper::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 35%;
+    background: url("../images/reviews/review-leaf.webp") top right/contain no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0; }
+
+.reviews__list {
+  display: flex;
+  position: relative;
+  z-index: 5; }
+
+.reviews__tabs {
+  display: flex; }
+
+.reviews__decor {
+  position: absolute;
+  bottom: 110%;
+  right: -8%; }
+
+.review {
+  display: flex; }
+
+.review__wrapper-photo {
+  flex: 0 0 31%;
+  margin-right: 3%; }
+
+.review__photo {
+  position: relative;
+  padding-bottom: 100%; }
+
+.review__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.review__content {
+  flex-basis: 55%;
+  padding: 1%; }
+
+.review__title {
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 1;
+  color: var(--black-text);
+  margin-bottom: 1em; }
+
+.review__text {
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: var(--grey-text);
+  line-height: 1.3333333333;
+  margin-bottom: 1.7777777778em; }
+
+.review__author {
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: var(--black-text); }
+
+.tabs__item {
+  width: 12vmin;
+  height: 12vmin;
+  overflow: hidden;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border 0.12s; }
+  .tabs__item:not(:last-child) {
+    margin-right: 0.5rem; }
+  .tabs__item:hover, .tabs__item--active {
+    border: 4px solid var(--green); }
+
+.tabs__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
 
 /*# sourceMappingURL=main.css.map */

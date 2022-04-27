@@ -1,0 +1,54 @@
+.review {
+  display: flex;
+}
+
+.review__wrapper-photo {
+  flex: 0 0 31%;
+
+  margin-right: 3%;
+}
+
+.review__photo {
+  position: relative;
+
+  padding-bottom: 100%;
+}
+
+.review__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review__content {
+  flex-basis: 55%;
+
+  padding: 1%;
+}
+
+.review__title {
+  @include alegreya(700);
+  font-size: rem(30);
+  line-height: lh(30, 30);
+  color: var(--black-text);
+
+  margin-bottom: em(30, 30);
+}
+
+.review__text {
+  @include alegreya(400);
+  font-size: rem(18);
+  color: var(--grey-text);
+  line-height: lh(24, 18);
+
+  margin-bottom: em(32, 18);
+}
+
+.review__author {
+  @include alegreya(500);
+  font-size: rem(18);
+  color: var(--black-text);
+}

@@ -1,0 +1,67 @@
+.reviews {
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.reviews__title {
+  z-index: 5;
+
+  margin-bottom: 7vh;
+}
+
+.reviews__wrapper {
+  background-color: var(--grey);
+  position: relative;
+
+  padding: 5%;
+  margin-bottom: rem(32);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 10vmin;
+    height: 10vmin;
+    background-color: var(--white);
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 35%;
+    background: url("../images/reviews/review-leaf.webp") top right / contain
+      no-repeat;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.reviews__list {
+  display: flex;
+  // из-за листьев в правом верхнем углу
+  position: relative;
+  z-index: 5;
+}
+
+.reviews__tabs {
+  display: flex;
+}
+
+.reviews__decor {
+  position: absolute;
+  bottom: 110%;
+  right: -8%;
+}
