@@ -5,8 +5,8 @@
 }
 
 // Функция для перевода в em`ы
-@function em($value, $em) {
-  $emValue: ($value / $em) + em;
+@function em($value, $fontSize) {
+  $emValue: ($value / $fontSize) + em;
   @return $emValue;
 }
 

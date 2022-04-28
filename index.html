@@ -89,6 +89,7 @@
 
         </div>
       </section>
+      <!-- ./intro -->
 
       <section class="section about">
         <div class="container about__container">
@@ -152,6 +153,7 @@
         </div>
 
       </section>
+      <!-- ./about -->
 
       <section class="section reviews">
         <div class="container reviews__container">
@@ -206,6 +208,91 @@
 
         </div>
       </section>
+      <!-- ./reviews -->
+
+      <section class="section order-form">
+        <div class="container order-form__container">
+          <h2 class="section-title section-title--green order-form__title">Закажите доставку</h2>
+          <form class="order-form__form form" action="#">
+            <div class="form__wrapper">
+
+              <div class="form__col">
+                <div class="form__row">
+                  <label class="form__label">
+                    <span class="form__field-name">Имя</span>
+                    <input class="form__input" name="name" type="text" placeholder="Ваше имя" required>
+                  </label>
+                  <label class="form__label">
+                    <span class="form__field-name">Телефон</span>
+                    <input class="form__input" name="phone" type="tel" placeholder="Ваш телефон" value="89991234567"
+                      required>
+                  </label>
+                </div>
+                <div class="form__row">
+                  <label class="form__label">
+                    <span class="form__field-name">Улица</span>
+                    <input class="form__input" name="street" type="text" placeholder="Ваш адрес" required>
+                  </label>
+                </div>
+                <div class="form__row">
+                  <label class="form__label">
+                    <span class="form__field-name">Дом</span>
+                    <input class="form__input" name="house" type="text" placeholder="..." required>
+                  </label>
+                  <label class="form__label">
+                    <span class="form__field-name">Корпус</span>
+                    <input class="form__input" name="corpus" type="text" placeholder="...">
+                  </label>
+                  <label class="form__label">
+                    <span class="form__field-name">Квартира</span>
+                    <input class="form__input" name="flat" type="text" placeholder="..." required>
+                  </label>
+                  <label class="form__label">
+                    <span class="form__field-name">Этаж</span>
+                    <input class="form__input" name="floor" type="text" placeholder="..." required>
+                  </label>
+                </div>
+              </div>
+              <!-- ./left form block -->
+              <div class="form__col">
+                <div class="form__row">
+                  <label class="form__label">
+                    <span class="form__field-name">Комментарий</span>
+                    <textarea class="form__input form__textarea" name="comment" required></textarea>
+                  </label>
+                </div>
+                <div class="form__row">
+                  <label class="form__label form__label--inline">
+                    <input class="form__hidden" type="radio" name="payment" value="cash">
+                    <span class="form__fake-radio"></span>
+                    <span class="form__field-name">Потребуется сдача</span>
+                  </label>
+                  <label class="form__label form__label--inline">
+                    <input class="form__hidden" type="radio" name="payment" value="online" checked>
+                    <span class="form__fake-radio"></span>
+                    <span class="form__field-name">Оплатить онлайн</span>
+                  </label>
+                </div>
+                <div class="form__row">
+                  <label class="form__label form__label--inline">
+                    <input class="form__hidden" type="checkbox" name="callback" value="dont-call-back">
+                    <span class="form__fake-checkbox"></span>
+                    <span class="form__field-name">Не перезванивать</span>
+                  </label>
+                </div>
+                <div class="form__row form__row--controls">
+                  <button type="submit" class="btn btn--green">Заказать</button>
+                  <button class="form__reset-btn" type="reset">Очистить</button>
+                </div>
+              </div>
+              <!-- ./right form block -->
+
+            </div>
+            <!-- ./form__wrapper -->
+          </form>
+        </div>
+      </section>
+      <!-- ./order-form -->
 
     </main>
 
