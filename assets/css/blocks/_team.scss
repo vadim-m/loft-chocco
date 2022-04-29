@@ -1,0 +1,137 @@
+.team {
+  background: url("../images/team/bg-team.png") center center / cover no-repeat;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+  }
+
+  &__title {
+    text-align: center;
+
+    margin-bottom: em(60, 48);
+  }
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-between;
+
+  min-height: rem(448);
+}
+
+.team__item {
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+
+  &--active .team__name::after {
+    transform: rotate(180deg);
+    top: 41%;
+  }
+
+  &--active .team__info {
+    opacity: 1;
+    max-height: 200px;
+
+    /* выезд вниз */
+    transition-property: max-height, opacity;
+    transition-duration: 0.25s, 0.1s;
+    transition-delay: 0s, 0.15s;
+    transition-timing-function: linear;
+  }
+}
+
+.team__photo {
+  position: relative;
+
+  padding-bottom: 130%;
+  margin-bottom: 10%;
+}
+
+.team__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.team__desc {
+  text-align: center;
+}
+
+.team__name {
+  display: inline-flex;
+  @include alegreya(700);
+  font-size: rem(21);
+  color: var(--black-text);
+  line-height: lh(1, 1);
+  position: relative;
+  cursor: pointer;
+
+  margin-bottom: em(14, 21);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-25%);
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--black-text);
+    transition: 0.35s;
+
+    margin-left: 5px;
+  }
+}
+
+.team__info {
+  max-height: 0;
+  opacity: 0;
+
+  /* уход вверх */
+  transition-property: max-height, opacity;
+  transition-duration: 0.25s, 0.1s;
+  transition-delay: 0s, 0s;
+  transition-timing-function: linear;
+}
+
+.team__prof {
+  @include alegreya(400);
+  font-size: rem(18);
+  line-height: lh(1, 1);
+  color: var(--black-text);
+
+  margin-bottom: em(6, 18);
+}
+
+.team__text {
+  @include alegreya(300);
+  font-size: rem(18);
+  line-height: lh(24, 18);
+  color: var(--grey-text);
+}
+
+.team__raspberry {
+  position: absolute;
+  width: 10%;
+  left: -6%;
+  bottom: -4%;
+}
+
+.team__blueberry {
+  position: absolute;
+  width: 14%;
+  top: -7%;
+  right: -5%;
+}
