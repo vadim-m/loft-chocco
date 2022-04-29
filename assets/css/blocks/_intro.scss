@@ -26,8 +26,9 @@
 
 .intro__title {
   max-width: rem(352);
+  font-weight: 800;
 
-  margin-bottom: em(36, 48);
+  margin-bottom: em(12, 48);
 }
 
 .intro__desc {
@@ -37,7 +38,7 @@
   line-height: lh(30, 21);
   color: var(--white-text);
 
-  margin-bottom: em(30, 21);
+  margin-bottom: em(14, 21);
 }
 
 .intro__features {

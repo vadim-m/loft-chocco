@@ -1,7 +1,8 @@
+// colors
 :root {
   //text colors
   --black-text: #000;
-  --grey-text: #666666;
+  --grey-text: #1b1313;
   --green-text: #135a46;
   --white-text: #fff;
   // colors
@@ -10,6 +11,15 @@
   --green: #135a46;
   --white: #fff;
 }
+
+// breakpoints
+
+// Устройства Large,(компьютеры, менее 1200 пикселей) тут по 992рх
+$large: 1199.98px;
+// Устройства Medium (планшеты, менее 992 пикселей) тут по 768px
+$tablets: 991.98px;
+// Устройства X-Small (портретные телефоны, менее 576 пикселей) по 320hx
+$phones: 575.98px;
 
 //normalize
 @import "./layout/_normalize.scss";

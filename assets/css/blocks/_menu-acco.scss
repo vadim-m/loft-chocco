@@ -30,7 +30,7 @@
   }
 
   &--active .menu-acco__text {
-    max-width: 40vw;
+    max-width: 27vw;
     color: var(--white-text);
     padding: em(50, 16) em(32, 16);
 
@@ -74,7 +74,7 @@
 .menu-acco__text {
   max-width: 0;
   @include alegreya(400);
-  font-size: rem(16);
+  font-size: rem(18);
   line-height: lh(24, 16);
   background-color: rgba(51, 51, 49, 0.8);
 
