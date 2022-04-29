@@ -1,0 +1,85 @@
+.menu-acco {
+  background: url("../images/menu-acco/bg-menu.webp") center center / cover
+    no-repeat;
+}
+
+.menu-acco__content {
+  position: relative;
+  height: 100%;
+}
+
+.menu-acco__title {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.menu-acco__list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.menu-acco__item {
+  display: flex;
+
+  &--active {
+    transition: flex-basis 2s;
+  }
+
+  &--active .menu-acco__text {
+    max-width: 40vw;
+    color: var(--white-text);
+    padding: em(50, 16) em(32, 16);
+
+    // выезжает влево
+    transition: max-width 0.25s, color 0.2s 0.25s, padding 0.1s 0.1s;
+  }
+
+  &--active .menu-acco__subtitle {
+    color: #e7878f;
+  }
+}
+
+.menu-acco__trigger {
+  width: rem(100);
+  display: flex;
+  align-items: flex-end;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &:hover .menu-acco__subtitle {
+    color: #e7878f;
+  }
+}
+
+.menu-acco__subtitle {
+  @include alegreya(700);
+  font-size: rem(48);
+  color: var(--white-text);
+  line-height: rem(100);
+  white-space: nowrap;
+  pointer-events: none;
+
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+
+  margin-bottom: rem(-50);
+}
+
+.menu-acco__text {
+  max-width: 0;
+  @include alegreya(400);
+  font-size: rem(16);
+  line-height: lh(24, 16);
+  background-color: rgba(51, 51, 49, 0.8);
+
+  padding: 0;
+  color: transparent;
+
+  // уезжает вправо
+  transition: color 0.15s, padding 0.15s 0.1s, max-width 0.3s 0.4s;
+}
