@@ -565,7 +565,9 @@ body {
   color: var(--white-text);
   text-transform: uppercase; }
   .section-title--black {
-    color: var(--black-text); }
+    color: var(--black-text);
+    text-align: center;
+    margin-bottom: 1.25em; }
   .section-title--green {
     color: var(--green-text); }
 
@@ -760,9 +762,6 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative; }
-  .team__title {
-    text-align: center;
-    margin-bottom: 1.25em; }
 
 .team__list {
   display: flex;
@@ -900,9 +899,10 @@ body {
   display: flex;
   align-items: flex-end;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  cursor: pointer; }
   .menu-acco__trigger:hover .menu-acco__subtitle {
-    color: #e7878f; }
+    opacity: 0.85; }
 
 .menu-acco__subtitle {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
@@ -991,8 +991,7 @@ body {
   align-items: center; }
 
 .reviews__title {
-  z-index: 5;
-  margin-bottom: 7vh; }
+  z-index: 5; }
 
 .reviews__wrapper {
   background-color: var(--grey);
@@ -1080,6 +1079,47 @@ body {
   font-weight: 500;
   font-size: 1.125rem;
   color: var(--black-text); }
+
+.presentation {
+  background: url("../images/presentation/bg-presentation.webp") center center/cover no-repeat; }
+  .presentation__container {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center; }
+
+.presentation__title {
+  width: 100%;
+  margin-bottom: 0.8333333333em; }
+
+.presentation__content {
+  width: 80%;
+  max-width: 57.5rem;
+  margin: 0 auto; }
+
+.presentation__wrapper {
+  position: relative;
+  padding-bottom: 56.25%; }
+
+.presentation__player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: crimson; }
+
+.presentation__berries {
+  position: absolute;
+  left: -7%;
+  top: -14%; }
+
+.presentation__blackberry {
+  position: absolute;
+  right: -12%;
+  bottom: -15%; }
 
 .tabs__item {
   width: 12vmin;

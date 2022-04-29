@@ -110,6 +110,8 @@ body {
 
   &--black {
     color: var(--black-text);
+    text-align: center;
+    margin-bottom: em(60, 48);
   }
 
   &--green {

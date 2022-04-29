@@ -50,9 +50,10 @@
 
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: pointer;
 
   &:hover .menu-acco__subtitle {
-    color: #e7878f;
+    opacity: 0.85;
   }
 }
 
