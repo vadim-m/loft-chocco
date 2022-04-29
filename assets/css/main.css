@@ -1278,4 +1278,58 @@ input:checked + .form__fake-checkbox::after {
   .form__reset-btn:hover {
     color: var(--white-text); }
 
+.contacts {
+  background: url("../images/contants/map.jpg") center center/cover no-repeat;
+  position: relative; }
+
+.contacts {
+  background: url("../images/contants/map.jpg") center center/cover no-repeat;
+  position: relative; }
+
+.footer {
+  background-color: var(--white);
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.1428571429;
+  color: var(--black-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem 0; }
+
+.footer__container {
+  display: flex;
+  align-items: center; }
+
+.footer__col {
+  width: 50%; }
+
+.footer__address {
+  font-style: normal; }
+
+.footer__phone-number {
+  color: var(--black-text); }
+  .footer__phone-number .phone-number__icon {
+    fill: var(--black-text); }
+
+.socials {
+  display: flex;
+  justify-content: flex-end; }
+
+.socials__item:not(:last-child) {
+  margin-right: 0.75rem; }
+
+.socials__link:focus .socials__icon {
+  fill: var(--black-text); }
+
+.socials__icon {
+  fill: #b3b4b3;
+  width: 1.5rem;
+  height: 1.5rem; }
+  .socials__icon:hover {
+    fill: var(--black-text); }
+
 /*# sourceMappingURL=main.css.map */

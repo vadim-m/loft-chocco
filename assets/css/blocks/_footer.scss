@@ -1,0 +1,35 @@
+.footer {
+  background-color: var(--white);
+  @include alegreya(400);
+  font-size: rem(21);
+  line-height: lh(24, 21);
+  color: var(--black-text);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: rem(20) 0;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+}
+
+.footer__col {
+  width: 50%;
+}
+
+.footer__address {
+  font-style: normal;
+}
+
+.footer__phone-number {
+  color: var(--black-text);
+
+  & .phone-number__icon {
+    fill: var(--black-text);
+  }
+}

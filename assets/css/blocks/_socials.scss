@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: rem(12);
+}
+
+.socials__link:focus .socials__icon {
+  fill: var(--black-text);
+}
+
+.socials__icon {
+  fill: #b3b4b3;
+
+  width: rem(24);
+  height: rem(24);
+
+  &:hover {
+    fill: var(--black-text);
+  }
+}
