@@ -16,4 +16,8 @@
     margin-right: 5px;
     fill: var(--white-text);
   }
+
+  @include tablets {
+    display: none;
+  }
 }

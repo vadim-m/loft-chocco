@@ -11,9 +11,27 @@
   display: flex;
   align-items: center;
   height: rem(96);
+
+  @include tablets {
+    justify-content: space-between;
+  }
 }
 
 .header__menu {
   flex-grow: 1;
   padding: 0 3vw;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.header__burger {
+  display: none;
+
+  @include tablets {
+    display: flex;
+    z-index: 15;
+    align-items: center;
+  }
 }

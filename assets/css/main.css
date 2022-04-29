@@ -553,6 +553,9 @@ body {
   max-width: 60rem;
   padding: 0 10px;
   margin: 0 auto; }
+  @media screen and (max-width: 991.98px) {
+    .container {
+      padding: 0 30px; } }
 
 .content {
   flex-grow: 1; }
@@ -613,10 +616,24 @@ body {
   display: flex;
   align-items: center;
   height: 6rem; }
+  @media screen and (max-width: 991.98px) {
+    .header__container {
+      justify-content: space-between; } }
 
 .header__menu {
   flex-grow: 1;
   padding: 0 3vw; }
+  @media screen and (max-width: 991.98px) {
+    .header__menu {
+      display: none; } }
+
+.header__burger {
+  display: none; }
+  @media screen and (max-width: 991.98px) {
+    .header__burger {
+      display: flex;
+      z-index: 15;
+      align-items: center; } }
 
 .menu {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
@@ -649,6 +666,61 @@ body {
     height: 12px;
     margin-right: 5px;
     fill: var(--white-text); }
+  @media screen and (max-width: 991.98px) {
+    .phone-number {
+      display: none; } }
+
+.burger-menu {
+  width: 30px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  position: relative; }
+
+.burger-menu.active .burger-menu__item {
+  background-color: transparent;
+  transition: all 0.15s linear; }
+
+.burger-menu.active .burger-menu__item:after {
+  top: 0;
+  transform: rotate(45deg);
+  background-color: #d52424; }
+
+.burger-menu.active .burger-menu__item:before {
+  top: 0;
+  transform: rotate(-45deg);
+  background-color: #d52424; }
+
+.burger-menu__item {
+  height: 4px;
+  width: 100%;
+  background-color: var(--white);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.5s linear; }
+
+.burger-menu__item:before,
+.burger-menu__item:after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--white);
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  transition: all 0.3s linear; }
+
+.burger-menu__item:after {
+  top: -10px;
+  left: 0; }
 
 .intro {
   background: url("../images/intro/bg-intro.png") center center no-repeat;
@@ -658,17 +730,29 @@ body {
     height: 100%;
     position: relative;
     padding-top: 5.625rem; }
+    @media screen and (max-width: 991.98px) {
+      .intro__container {
+        position: static;
+        flex-wrap: wrap-reverse; } }
 
 .intro__content {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media screen and (max-width: 991.98px) {
+    .intro__content {
+      width: 100%; } }
 
 .intro__text {
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 3rem; }
+  @media screen and (max-width: 991.98px) {
+    .intro__text {
+      align-items: center;
+      text-align: center; } }
 
 .intro__title {
   max-width: 22rem;
@@ -676,7 +760,8 @@ body {
   margin-bottom: 0.25em; }
   @media screen and (max-width: 1199.98px) {
     .intro__title {
-      margin-bottom: 0.75em; } }
+      margin-bottom: 0.25em;
+      max-width: initial; } }
 
 .intro__desc {
   max-width: 22rem;
@@ -691,6 +776,10 @@ body {
     .intro__desc {
       margin-bottom: 1em; } }
 
+@media screen and (max-width: 991.98px) {
+  .intro__button {
+    align-self: center; } }
+
 .intro__features {
   position: absolute;
   left: 15px;
@@ -702,6 +791,11 @@ body {
 .intro__photo {
   width: 50%;
   display: flex; }
+  @media screen and (max-width: 991.98px) {
+    .intro__photo {
+      width: 100%;
+      justify-content: center;
+      position: relative; } }
 
 .intro__img {
   object-fit: contain; }
@@ -711,15 +805,28 @@ body {
   width: 6%;
   left: -2%;
   bottom: -4%; }
+  @media screen and (max-width: 991.98px) {
+    .intro__sheet {
+      width: 9%;
+      left: 10%;
+      bottom: 25%; } }
 
 .intro__berries {
   position: absolute;
   width: 40%;
   right: 0%;
   bottom: -5%; }
+  @media screen and (max-width: 991.98px) {
+    .intro__berries {
+      width: 70%;
+      right: 0;
+      bottom: 0; } }
 
 .features {
   display: flex; }
+  @media screen and (max-width: 991.98px) {
+    .features {
+      display: none; } }
 
 .features__item {
   display: flex; }

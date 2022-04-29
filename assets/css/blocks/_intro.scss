@@ -8,6 +8,11 @@
     position: relative;
 
     padding-top: rem(90);
+
+    @include tablets {
+      position: static;
+      flex-wrap: wrap-reverse;
+    }
   }
 }
 
@@ -16,12 +21,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .intro__text {
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  margin-bottom: 3rem;
+
+  @include tablets {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .intro__title {
@@ -31,7 +47,8 @@
   margin-bottom: em(12, 48);
 
   @include large {
-    margin-bottom: em(36, 48);
+    margin-bottom: em(12, 48);
+    max-width: initial;
   }
 }
 
@@ -49,6 +66,12 @@
   }
 }
 
+.intro__button {
+  @include tablets {
+    align-self: center;
+  }
+}
+
 .intro__features {
   position: absolute;
   left: 15px;
@@ -62,6 +85,12 @@
 .intro__photo {
   width: 50%;
   display: flex;
+
+  @include tablets {
+    width: 100%;
+    justify-content: center;
+    position: relative;
+  }
 }
 
 .intro__img {
@@ -73,6 +102,12 @@
   width: 6%;
   left: -2%;
   bottom: -4%;
+
+  @include tablets {
+    width: 9%;
+    left: 10%;
+    bottom: 25%;
+  }
 }
 
 .intro__berries {
@@ -80,4 +115,10 @@
   width: 40%;
   right: 0%;
   bottom: -5%;
+
+  @include tablets {
+    width: 70%;
+    right: 0;
+    bottom: 0;
+  }
 }
