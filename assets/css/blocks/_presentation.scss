@@ -16,6 +16,10 @@
   width: 100%;
 
   margin-bottom: em(40, 48);
+
+  @include large {
+    margin-bottom: em(24, 48);
+  }
 }
 
 .presentation__content {

@@ -36,6 +36,10 @@
 
     // выезжает влево
     transition: max-width 0.25s, color 0.2s 0.25s, padding 0.1s 0.1s;
+
+    @include large {
+      max-width: 32vw;
+    }
   }
 
   &--active .menu-acco__subtitle {

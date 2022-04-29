@@ -477,6 +477,9 @@ body {
 
 html {
   font-size: 125%; }
+  @media screen and (max-width: 1199.98px) {
+    html {
+      font-size: 100%; } }
 
 *,
 *:before,
@@ -570,6 +573,9 @@ body {
     color: var(--black-text);
     text-align: center;
     margin-bottom: 1.25em; }
+    @media screen and (max-width: 1199.98px) {
+      .section-title--black {
+        margin-bottom: 0.5em; } }
   .section-title--green {
     color: var(--green-text); }
 
@@ -668,6 +674,9 @@ body {
   max-width: 22rem;
   font-weight: 800;
   margin-bottom: 0.25em; }
+  @media screen and (max-width: 1199.98px) {
+    .intro__title {
+      margin-bottom: 0.75em; } }
 
 .intro__desc {
   max-width: 22rem;
@@ -678,6 +687,9 @@ body {
   line-height: 1.4285714286;
   color: var(--white-text);
   margin-bottom: 0.6666666667em; }
+  @media screen and (max-width: 1199.98px) {
+    .intro__desc {
+      margin-bottom: 1em; } }
 
 .intro__features {
   position: absolute;
@@ -894,6 +906,9 @@ body {
     color: var(--white-text);
     padding: 3.125em 2em;
     transition: max-width 0.25s, color 0.2s 0.25s, padding 0.1s 0.1s; }
+    @media screen and (max-width: 1199.98px) {
+      .menu-acco__item--active .menu-acco__text {
+        max-width: 32vw; } }
   .menu-acco__item--active .menu-acco__subtitle {
     color: #e7878f; }
 
@@ -1097,6 +1112,9 @@ body {
 .presentation__title {
   width: 100%;
   margin-bottom: 0.8333333333em; }
+  @media screen and (max-width: 1199.98px) {
+    .presentation__title {
+      margin-bottom: 0.5em; } }
 
 .presentation__content {
   width: 80%;

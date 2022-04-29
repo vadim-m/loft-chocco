@@ -29,6 +29,10 @@
   font-weight: 800;
 
   margin-bottom: em(12, 48);
+
+  @include large {
+    margin-bottom: em(36, 48);
+  }
 }
 
 .intro__desc {
@@ -39,6 +43,10 @@
   color: var(--white-text);
 
   margin-bottom: em(14, 21);
+
+  @include large {
+    margin-bottom: em(21, 21);
+  }
 }
 
 .intro__features {

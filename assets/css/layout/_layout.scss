@@ -6,6 +6,9 @@ body {
 
 html {
   font-size: 125%;
+  @include large {
+    font-size: 100%;
+  }
 }
 
 *,
@@ -115,6 +118,10 @@ body {
     color: var(--black-text);
     text-align: center;
     margin-bottom: em(60, 48);
+
+    @include large {
+      margin-bottom: em(24, 48);
+    }
   }
 
   &--green {
