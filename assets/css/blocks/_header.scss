@@ -35,3 +35,9 @@
     align-items: center;
   }
 }
+
+.header .phone-number {
+  @include tablets {
+    display: none;
+  }
+}

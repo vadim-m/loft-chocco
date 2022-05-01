@@ -1,11 +1,21 @@
 .review {
   display: flex;
+
+  @include tablets {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .review__wrapper-photo {
   flex: 0 0 31%;
 
   margin-right: 3%;
+
+  @include tablets {
+    flex: 0 0 25%;
+    margin: 5%;
+  }
 }
 
 .review__photo {
@@ -27,6 +37,11 @@
   flex-basis: 55%;
 
   padding: 1%;
+
+  @include tablets {
+    flex-basis: 100%;
+    text-align: center;
+  }
 }
 
 .review__title {

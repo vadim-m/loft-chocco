@@ -20,6 +20,10 @@
   display: flex;
 
   justify-content: flex-end;
+
+  @include tablets {
+    position: relative;
+  }
 }
 
 .menu-acco__item {
@@ -39,6 +43,10 @@
 
     @include large {
       max-width: 32vw;
+    }
+
+    @include tablets {
+      max-width: max-content;
     }
   }
 

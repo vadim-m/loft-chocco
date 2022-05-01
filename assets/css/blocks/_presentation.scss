@@ -2,6 +2,11 @@
   background: url("../images/presentation/bg-presentation.webp") center center /
     cover no-repeat;
 
+  @include tablets {
+    background: url("../images/presentation/bg-presentation-tablets.png") center
+      center / cover no-repeat;
+  }
+
   &__container {
     height: 100%;
     position: relative;
@@ -27,6 +32,10 @@
   max-width: rem(920);
 
   margin: 0 auto;
+
+  @include tablets {
+    width: 95%;
+  }
 }
 
 .presentation__wrapper {
@@ -49,10 +58,20 @@
   position: absolute;
   left: -7%;
   top: -14%;
+
+  @include tablets {
+    left: -3%;
+    top: -7%;
+  }
 }
 
 .presentation__blackberry {
   position: absolute;
   right: -12%;
   bottom: -15%;
+
+  @include tablets {
+    right: -7%;
+    bottom: -10%;
+  }
 }

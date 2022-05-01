@@ -635,6 +635,10 @@ body {
       z-index: 15;
       align-items: center; } }
 
+@media screen and (max-width: 991.98px) {
+  .header .phone-number {
+    display: none; } }
+
 .menu {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
   font-style: normal;
@@ -666,9 +670,6 @@ body {
     height: 12px;
     margin-right: 5px;
     fill: var(--white-text); }
-  @media screen and (max-width: 991.98px) {
-    .phone-number {
-      display: none; } }
 
 .burger-menu {
   width: 30px;
@@ -855,6 +856,10 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative; }
+  @media screen and (max-width: 991.98px) {
+    .about {
+      background: url("../images/about/bg-about-tablets.png") center center no-repeat;
+      background-size: cover; } }
 
 .about__title {
   text-align: center;
@@ -884,11 +889,23 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative; }
+    @media screen and (max-width: 991.98px) {
+      .team__container {
+        justify-content: flex-start;
+        padding-top: 15vh; } }
+  @media screen and (max-width: 991.98px) {
+    .team {
+      background: url("../images/team/bg-team-tablets.png") center center/cover no-repeat; } }
 
 .team__list {
   display: flex;
   justify-content: space-between;
   min-height: 28rem; }
+  @media screen and (max-width: 991.98px) {
+    .team__list {
+      flex-direction: column;
+      align-items: center;
+      min-height: auto; } }
 
 .team__item {
   width: 24%;
@@ -899,17 +916,65 @@ body {
     top: 41%; }
   .team__item--active .team__info {
     opacity: 1;
-    max-height: 200px;
+    max-height: 150px;
     /* выезд вниз */
     transition-property: max-height, opacity;
     transition-duration: 0.25s, 0.1s;
     transition-delay: 0s, 0.15s;
     transition-timing-function: linear; }
+    @media screen and (max-width: 991.98px) {
+      .team__item--active .team__info {
+        /* выезд вниз при ХОВЕРЕ */
+        transition-property: max-height, opacity;
+        transition-duration: 0.25s, 0.25s;
+        transition-delay: 0s, 0.65s;
+        transition-timing-function: linear; } }
+  @media screen and (max-width: 991.98px) {
+    .team__item {
+      width: 32%;
+      flex-direction: row;
+      flex-wrap: wrap; } }
+  .team__item--active .team__photo {
+    padding-bottom: 130%;
+    max-height: 400px;
+    opacity: 1;
+    /* выезд вниз при ХОВЕРЕ */
+    transition-property: max-height, opacity;
+    transition-duration: 0.25s, 0.25s;
+    transition-delay: 0s, 0.65s;
+    transition-timing-function: linear; }
+
+.team__info {
+  max-height: 0;
+  opacity: 0;
+  /* уход вверх */
+  transition-property: max-height, opacity;
+  transition-duration: 0.25s, 0.1s;
+  transition-delay: 0s, 0s;
+  transition-timing-function: linear; }
+  @media screen and (max-width: 991.98px) {
+    .team__info {
+      /* уход наверх */
+      transition-property: opacity, max-height;
+      transition-duration: 0.15s, 0.25;
+      transition-delay: 0s, 0.15s;
+      transition-timing-function: linear; } }
 
 .team__photo {
   position: relative;
   padding-bottom: 130%;
   margin-bottom: 10%; }
+  @media screen and (max-width: 991.98px) {
+    .team__photo {
+      width: 100%;
+      padding-bottom: 0%;
+      max-height: 0;
+      opacity: 0;
+      /* уход наверх */
+      transition-property: opacity, padding-bottom;
+      transition-duration: 0.15s, 0.25s;
+      transition-delay: 0s, 0.15s;
+      transition-timing-function: linear; } }
 
 .team__image {
   position: absolute;
@@ -921,6 +986,9 @@ body {
 
 .team__desc {
   text-align: center; }
+  @media screen and (max-width: 991.98px) {
+    .team__desc {
+      order: -1; } }
 
 .team__name {
   display: inline-flex;
@@ -948,15 +1016,6 @@ body {
     transition: 0.35s;
     margin-left: 5px; }
 
-.team__info {
-  max-height: 0;
-  opacity: 0;
-  /* уход вверх */
-  transition-property: max-height, opacity;
-  transition-duration: 0.25s, 0.1s;
-  transition-delay: 0s, 0s;
-  transition-timing-function: linear; }
-
 .team__prof {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
   font-style: normal;
@@ -973,18 +1032,30 @@ body {
   font-size: 1.125rem;
   line-height: 1.3333333333;
   color: var(--grey-text); }
+  @media screen and (max-width: 991.98px) {
+    .team__text {
+      padding-bottom: 0.6666666667em; } }
 
 .team__raspberry {
   position: absolute;
   width: 10%;
   left: -6%;
-  bottom: -4%; }
+  bottom: -4%;
+  z-index: 5; }
+  @media screen and (max-width: 991.98px) {
+    .team__raspberry {
+      left: 0; } }
 
 .team__blueberry {
   position: absolute;
   width: 14%;
   top: -7%;
-  right: -5%; }
+  right: -5%;
+  z-index: 5; }
+  @media screen and (max-width: 991.98px) {
+    .team__blueberry {
+      top: -4%;
+      right: -2%; } }
 
 .menu-acco {
   background: url("../images/menu-acco/bg-menu.webp") center center/cover no-repeat; }
@@ -1003,6 +1074,9 @@ body {
   height: 100%;
   display: flex;
   justify-content: flex-end; }
+  @media screen and (max-width: 991.98px) {
+    .menu-acco__list {
+      position: relative; } }
 
 .menu-acco__item {
   display: flex; }
@@ -1016,6 +1090,9 @@ body {
     @media screen and (max-width: 1199.98px) {
       .menu-acco__item--active .menu-acco__text {
         max-width: 32vw; } }
+    @media screen and (max-width: 991.98px) {
+      .menu-acco__item--active .menu-acco__text {
+        max-width: max-content; } }
   .menu-acco__item--active .menu-acco__subtitle {
     color: #e7878f; }
 
@@ -1075,6 +1152,9 @@ body {
     right: 0;
     top: 10vh;
     transform: translate(50%, -50%); }
+    @media screen and (max-width: 991.98px) {
+      .advantages__item:not(:last-child):after {
+        top: 8vh; } }
 
 .advantages__photo {
   width: 20vh;
@@ -1086,10 +1166,17 @@ body {
   border-radius: 50%;
   background-color: var(--grey);
   margin-bottom: 2.25rem; }
+  @media screen and (max-width: 991.98px) {
+    .advantages__photo {
+      width: 16vh;
+      height: 16vh; } }
 
 .advantages__icon {
   width: 12vh;
   fill: #54a791; }
+  @media screen and (max-width: 991.98px) {
+    .advantages__icon {
+      width: 9vh; } }
 
 .advantages__subtitle {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
@@ -1099,6 +1186,9 @@ body {
   color: var(--black-text);
   letter-spacing: 2px;
   margin-bottom: 1.1111111111em; }
+  @media screen and (max-width: 991.98px) {
+    .advantages__subtitle {
+      margin-bottom: 0.5555555556em; } }
 
 .advantages__desc {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
@@ -1160,10 +1250,18 @@ body {
 
 .review {
   display: flex; }
+  @media screen and (max-width: 991.98px) {
+    .review {
+      flex-wrap: wrap;
+      justify-content: center; } }
 
 .review__wrapper-photo {
   flex: 0 0 31%;
   margin-right: 3%; }
+  @media screen and (max-width: 991.98px) {
+    .review__wrapper-photo {
+      flex: 0 0 25%;
+      margin: 5%; } }
 
 .review__photo {
   position: relative;
@@ -1180,6 +1278,10 @@ body {
 .review__content {
   flex-basis: 55%;
   padding: 1%; }
+  @media screen and (max-width: 991.98px) {
+    .review__content {
+      flex-basis: 100%;
+      text-align: center; } }
 
 .review__title {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
@@ -1208,6 +1310,9 @@ body {
 
 .presentation {
   background: url("../images/presentation/bg-presentation.webp") center center/cover no-repeat; }
+  @media screen and (max-width: 991.98px) {
+    .presentation {
+      background: url("../images/presentation/bg-presentation-tablets.png") center center/cover no-repeat; } }
   .presentation__container {
     height: 100%;
     position: relative;
@@ -1227,6 +1332,9 @@ body {
   width: 80%;
   max-width: 57.5rem;
   margin: 0 auto; }
+  @media screen and (max-width: 991.98px) {
+    .presentation__content {
+      width: 95%; } }
 
 .presentation__wrapper {
   position: relative;
@@ -1244,11 +1352,19 @@ body {
   position: absolute;
   left: -7%;
   top: -14%; }
+  @media screen and (max-width: 991.98px) {
+    .presentation__berries {
+      left: -3%;
+      top: -7%; } }
 
 .presentation__blackberry {
   position: absolute;
   right: -12%;
   bottom: -15%; }
+  @media screen and (max-width: 991.98px) {
+    .presentation__blackberry {
+      right: -7%;
+      bottom: -10%; } }
 
 .tabs__item {
   width: 12vmin;
@@ -1282,17 +1398,34 @@ body {
 .form__wrapper {
   display: flex;
   justify-content: space-between; }
+  @media screen and (max-width: 991.98px) {
+    .form__wrapper {
+      flex-wrap: wrap;
+      width: 86%;
+      margin: 0 auto; } }
 
 .form__col {
   width: 49.25%; }
+  @media screen and (max-width: 991.98px) {
+    .form__col {
+      width: 100%; } }
 
 .form__row {
   width: 100%;
   display: flex; }
   .form__row--controls {
     margin-top: 2.5rem; }
+    @media screen and (max-width: 991.98px) {
+      .form__row--controls {
+        justify-content: center; } }
   .form__row:not(:last-child) {
     margin-bottom: 0.5em; }
+    @media screen and (max-width: 991.98px) {
+      .form__row:not(:last-child) {
+        margin-bottom: 1em; } }
+  @media screen and (max-width: 991.98px) {
+    .form__row {
+      margin-bottom: 1em; } }
 
 .form__field-name {
   display: inline-block; }

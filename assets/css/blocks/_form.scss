@@ -1,10 +1,21 @@
 .form__wrapper {
   display: flex;
   justify-content: space-between;
+
+  @include tablets {
+    flex-wrap: wrap;
+
+    width: 86%;
+    margin: 0 auto;
+  }
 }
 
 .form__col {
   width: 49.25%;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .form__row {
@@ -13,10 +24,22 @@
 
   &--controls {
     margin-top: rem(40);
+
+    @include tablets {
+      justify-content: center;
+    }
   }
 
   &:not(:last-child) {
     margin-bottom: em(9, 18);
+
+    @include tablets {
+      margin-bottom: em(18, 18);
+    }
+  }
+
+  @include tablets {
+    margin-bottom: em(18, 18);
   }
 }
 

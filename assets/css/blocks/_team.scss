@@ -8,6 +8,16 @@
     justify-content: center;
 
     position: relative;
+
+    @include tablets {
+      justify-content: flex-start;
+      padding-top: 15vh;
+    }
+  }
+
+  @include tablets {
+    background: url("../images/team/bg-team-tablets.png") center center / cover
+      no-repeat;
   }
 }
 
@@ -16,6 +26,13 @@
   justify-content: space-between;
 
   min-height: rem(448);
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+
+    min-height: auto;
+  }
 }
 
 .team__item {
@@ -30,11 +47,56 @@
 
   &--active .team__info {
     opacity: 1;
-    max-height: 200px;
+    max-height: 150px;
 
     /* выезд вниз */
     transition-property: max-height, opacity;
     transition-duration: 0.25s, 0.1s;
+    transition-delay: 0s, 0.15s;
+    transition-timing-function: linear;
+
+    @include tablets {
+      /* выезд вниз при ХОВЕРЕ */
+      transition-property: max-height, opacity;
+      transition-duration: 0.25s, 0.25s;
+      transition-delay: 0s, 0.65s;
+      transition-timing-function: linear;
+    }
+  }
+
+  @include tablets {
+    width: 32%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &--active .team__photo {
+    padding-bottom: 130%;
+    max-height: 400px;
+    opacity: 1;
+
+    /* выезд вниз при ХОВЕРЕ */
+    transition-property: max-height, opacity;
+    transition-duration: 0.25s, 0.25s;
+    transition-delay: 0s, 0.65s;
+    transition-timing-function: linear;
+  }
+}
+
+.team__info {
+  max-height: 0;
+  opacity: 0;
+
+  /* уход вверх */
+  transition-property: max-height, opacity;
+  transition-duration: 0.25s, 0.1s;
+  transition-delay: 0s, 0s;
+  transition-timing-function: linear;
+
+  @include tablets {
+    /* уход наверх */
+    transition-property: opacity, max-height;
+    transition-duration: 0.15s, 0.25;
     transition-delay: 0s, 0.15s;
     transition-timing-function: linear;
   }
@@ -45,6 +107,20 @@
 
   padding-bottom: 130%;
   margin-bottom: 10%;
+
+  @include tablets {
+    width: 100%;
+
+    padding-bottom: 0%;
+    max-height: 0;
+    opacity: 0;
+
+    /* уход наверх */
+    transition-property: opacity, padding-bottom;
+    transition-duration: 0.15s, 0.25s;
+    transition-delay: 0s, 0.15s;
+    transition-timing-function: linear;
+  }
 }
 
 .team__image {
@@ -58,6 +134,10 @@
 
 .team__desc {
   text-align: center;
+
+  @include tablets {
+    order: -1;
+  }
 }
 
 .team__name {
@@ -89,17 +169,6 @@
   }
 }
 
-.team__info {
-  max-height: 0;
-  opacity: 0;
-
-  /* уход вверх */
-  transition-property: max-height, opacity;
-  transition-duration: 0.25s, 0.1s;
-  transition-delay: 0s, 0s;
-  transition-timing-function: linear;
-}
-
 .team__prof {
   @include alegreya(400);
   font-size: rem(18);
@@ -114,6 +183,10 @@
   font-size: rem(18);
   line-height: lh(24, 18);
   color: var(--grey-text);
+
+  @include tablets {
+    padding-bottom: em(14, 21);
+  }
 }
 
 .team__raspberry {
@@ -121,6 +194,11 @@
   width: 10%;
   left: -6%;
   bottom: -4%;
+  z-index: 5;
+
+  @include tablets {
+    left: 0;
+  }
 }
 
 .team__blueberry {
@@ -128,4 +206,10 @@
   width: 14%;
   top: -7%;
   right: -5%;
+  z-index: 5;
+
+  @include tablets {
+    top: -4%;
+    right: -2%;
+  }
 }

@@ -23,6 +23,10 @@
     right: 0;
     top: 10vh;
     transform: translate(50%, -50%);
+
+    @include tablets {
+      top: 8vh;
+    }
   }
 }
 
@@ -39,11 +43,20 @@
   background-color: var(--grey);
 
   margin-bottom: rem(36);
+
+  @include tablets {
+    width: 16vh;
+    height: 16vh;
+  }
 }
 
 .advantages__icon {
   width: 12vh;
   fill: #54a791;
+
+  @include tablets {
+    width: 9vh;
+  }
 }
 
 .advantages__subtitle {
@@ -53,6 +66,10 @@
   letter-spacing: 2px;
 
   margin-bottom: em(30, 27);
+
+  @include tablets {
+    margin-bottom: em(15, 27);
+  }
 }
 
 .advantages__desc {

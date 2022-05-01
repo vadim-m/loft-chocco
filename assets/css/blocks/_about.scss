@@ -9,6 +9,12 @@
     justify-content: center;
     position: relative;
   }
+
+  @include tablets {
+    background: url("../images/about/bg-about-tablets.png") center center
+      no-repeat;
+    background-size: cover;
+  }
 }
 
 .about__title {
