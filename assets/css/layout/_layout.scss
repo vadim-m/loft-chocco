@@ -100,6 +100,10 @@ body {
   @include tablets {
     padding: 0 30px;
   }
+
+  @include phones {
+    padding: 10px;
+  }
 }
 
 .content {
@@ -109,6 +113,10 @@ body {
 .section {
   height: 100vh;
   min-height: 650px;
+
+  @include phones {
+    min-height: auto;
+  }
 }
 
 .section-title {
@@ -117,6 +125,11 @@ body {
   line-height: lh(60, 48);
   color: var(--white-text);
   text-transform: uppercase;
+
+  @include phones {
+    font-size: rem(40);
+    line-height: lh(36, 40);
+  }
 
   &--black {
     color: var(--black-text);

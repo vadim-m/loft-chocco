@@ -32,6 +32,11 @@
   text-align: center;
 
   margin: 0 auto em(54, 18);
+
+  @include phones {
+    line-height: 1.5;
+    margin: 0 auto em(36, 18);
+  }
 }
 
 .about__decor {
@@ -39,4 +44,8 @@
 
   right: -3%;
   bottom: -6%;
+
+  @include phones {
+    width: 35%;
+  }
 }

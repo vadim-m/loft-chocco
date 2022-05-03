@@ -24,6 +24,10 @@
   @include tablets {
     position: relative;
   }
+
+  @include phones {
+    justify-content: flex-start;
+  }
 }
 
 .menu-acco__item {
@@ -48,6 +52,11 @@
     @include tablets {
       max-width: max-content;
     }
+
+    @include phones {
+      max-width: 84vw;
+      width: 84vw;
+    }
   }
 
   &--active .menu-acco__subtitle {
@@ -67,6 +76,10 @@
   &:hover .menu-acco__subtitle {
     opacity: 0.85;
   }
+
+  @include phones {
+    width: 16vw;
+  }
 }
 
 .menu-acco__subtitle {
@@ -81,6 +94,12 @@
   transform-origin: 0 0;
 
   margin-bottom: rem(-50);
+
+  @include phones {
+    line-height: 16vw;
+
+    margin-bottom: rem(-32);
+  }
 }
 
 .menu-acco__text {

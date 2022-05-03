@@ -18,6 +18,10 @@
       position: static;
       flex-wrap: wrap-reverse;
     }
+
+    @include phones {
+      padding-top: 0;
+    }
   }
 }
 
@@ -42,6 +46,10 @@
   @include tablets {
     align-items: center;
     text-align: center;
+  }
+
+  @include phones {
+    margin-bottom: 0;
   }
 }
 
@@ -68,6 +76,10 @@
 
   @include large {
     margin-bottom: em(21, 21);
+  }
+
+  @include phones {
+    font-size: rem(18);
   }
 }
 

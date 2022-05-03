@@ -11,15 +11,36 @@
   right: 0;
 
   padding: rem(20) 0;
+
+  @include phones {
+    padding: 0;
+  }
 }
 
 .footer__container {
   display: flex;
   align-items: center;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .footer__col {
   width: 50%;
+
+  @include phones {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.footer__col .socials {
+  @include phones {
+    justify-content: center;
+
+    padding-top: 5px;
+  }
 }
 
 .footer__address {
@@ -31,5 +52,9 @@
 
   & .phone-number__icon {
     fill: var(--black-text);
+  }
+
+  @include phones {
+    justify-content: center;
   }
 }

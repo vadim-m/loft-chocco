@@ -8,6 +8,10 @@
     width: 86%;
     margin: 0 auto;
   }
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .form__col {
@@ -28,6 +32,10 @@
     @include tablets {
       justify-content: center;
     }
+
+    @include phones {
+      margin-top: rem(20);
+    }
   }
 
   &:not(:last-child) {
@@ -36,10 +44,18 @@
     @include tablets {
       margin-bottom: em(18, 18);
     }
+
+    @include phones {
+      margin-bottom: em(7, 14);
+    }
   }
 
   @include tablets {
     margin-bottom: em(18, 18);
+  }
+
+  @include phones {
+    margin-bottom: em(7, 14);
   }
 }
 
@@ -65,6 +81,11 @@
     align-items: center;
     width: auto;
 
+    @include phones {
+      width: 100%;
+      justify-content: center;
+    }
+
     & .form__field-name {
       margin-bottom: 0;
       line-height: 1;
@@ -89,6 +110,10 @@
 
   padding: em(12, 18) em(24, 18);
 
+  @include phones {
+    font-size: rem(14);
+  }
+
   &::placeholder {
     color: rgba(84, 167, 145, 0.8);
   }
@@ -105,6 +130,12 @@
   height: rem(180);
 
   margin-bottom: rem(16);
+
+  @include phones {
+    height: rem(80);
+
+    margin-bottom: 0;
+  }
 }
 
 .form__hidden {
