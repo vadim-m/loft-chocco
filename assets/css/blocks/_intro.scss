@@ -2,6 +2,11 @@
   background: url("../images/intro/bg-intro.png") center center no-repeat;
   background-size: cover;
 
+  @include tablets {
+    background: url("../images/intro/bg-intro-tablets.png") center center
+      no-repeat;
+  }
+
   &__container {
     display: flex;
     height: 100%;
