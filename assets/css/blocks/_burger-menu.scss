@@ -5,23 +5,23 @@
   cursor: pointer;
   background-color: transparent;
   position: relative;
-}
 
-.burger-menu.active .burger-menu__item {
-  background-color: transparent;
-  transition: all 0.15s linear;
-}
+  &--active .burger-menu__item {
+    background-color: transparent;
+    transition: all 0.15s linear;
+  }
 
-.burger-menu.active .burger-menu__item:after {
-  top: 0;
-  transform: rotate(45deg);
-  background-color: #d52424;
-}
+  &--active .burger-menu__item:after {
+    top: 0;
+    transform: rotate(45deg);
+    background-color: #d52424;
+  }
 
-.burger-menu.active .burger-menu__item:before {
-  top: 0;
-  transform: rotate(-45deg);
-  background-color: #d52424;
+  &--active .burger-menu__item:before {
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: #d52424;
+  }
 }
 
 .burger-menu__item {

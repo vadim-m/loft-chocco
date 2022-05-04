@@ -8,10 +8,29 @@
 .menu__list {
   display: flex;
   justify-content: space-between;
+
+  &--vertical {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    @include alegreya(700);
+    font-size: rem(36);
+    line-height: lh(72, 36);
+    color: var(--white-text);
+    text-align: center;
+  }
 }
 
 .menu__item {
   &:hover {
     color: var(--green-text);
+
+    @include tablets {
+      color: #54a791;
+    }
   }
 }

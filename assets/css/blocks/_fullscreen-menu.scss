@@ -1,0 +1,21 @@
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: -150vw;
+  height: 100%;
+  width: 100%;
+
+  background-color: #333537;
+  opacity: 0.95;
+
+  transition: left 0.5s;
+
+  &--active {
+    left: 0;
+  }
+}
+
+.fullscreen-menu .menu {
+  height: 100%;
+  width: 100%;
+}

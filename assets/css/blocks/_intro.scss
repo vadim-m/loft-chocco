@@ -3,8 +3,8 @@
   background-size: cover;
 
   @include tablets {
-    background: url("../images/intro/bg-intro-tablets.png") center center
-      no-repeat;
+    background: url("../images/intro/bg-intro-tablets.png") center center /
+      cover no-repeat;
   }
 
   &__container {
