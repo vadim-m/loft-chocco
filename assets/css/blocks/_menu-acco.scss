@@ -12,6 +12,11 @@
   position: absolute;
   top: 100px;
   left: 100px;
+
+  @include phones {
+    top: 10%;
+    left: 10%;
+  }
 }
 
 .menu-acco__list {
@@ -23,10 +28,6 @@
 
   @include tablets {
     position: relative;
-  }
-
-  @include phones {
-    justify-content: flex-start;
   }
 }
 
@@ -50,12 +51,15 @@
     }
 
     @include tablets {
-      max-width: max-content;
+      max-width: 55vw;
+
+      transition: max-width 0.35s, color 0.2s 0.55s, padding 0.4s;
     }
 
     @include phones {
-      max-width: 84vw;
-      width: 84vw;
+      transition: max-width 0.45s, color 0.2s 0.55s, padding 0s 0.1s;
+
+      padding: 1em 0.75em;
     }
   }
 
@@ -77,8 +81,8 @@
     opacity: 0.85;
   }
 
-  @include phones {
-    width: 16vw;
+  @include tablets {
+    width: 15vw;
   }
 }
 
@@ -95,9 +99,11 @@
 
   margin-bottom: rem(-50);
 
-  @include phones {
-    line-height: 16vw;
+  @include tablets {
+    line-height: 15vw;
+  }
 
+  @include phones {
     margin-bottom: rem(-32);
   }
 }
@@ -114,4 +120,12 @@
 
   // уезжает вправо
   transition: color 0.15s, padding 0.15s 0.1s, max-width 0.3s 0.4s;
+
+  @include tablets {
+    transition: color 0.05s, padding 0s 0.1s, max-width 0.4s 0.1s;
+  }
+
+  @include phones {
+    transition: color 0.05s, padding 0s 0.1s, max-width 0.45s 0s;
+  }
 }

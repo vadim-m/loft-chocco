@@ -68,4 +68,8 @@
   position: absolute;
   bottom: 110%;
   right: -8%;
+
+  @include phones {
+    display: none;
+  }
 }
