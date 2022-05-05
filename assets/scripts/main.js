@@ -52,7 +52,10 @@ teamList.addEventListener("click", (e) => {
 let activeMenuItem = document.querySelector(".menu-acco__item");
 
 menuList.addEventListener("click", (e) => {
-  if (e.target.classList.contains("menu-acco__trigger")) {
+  if (e.target.classList.contains("menu-acco__span")) {
+    e.target.parentNode.parentNode.classList.remove("menu-acco__item--active");
+    return;
+  } else if (e.target.classList.contains("menu-acco__trigger")) {
     let targetItem = e.target.parentNode;
 
     if (targetItem.classList.contains("menu-acco__item--active")) {
