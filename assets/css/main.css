@@ -960,6 +960,10 @@ body {
       flex-direction: column;
       align-items: center;
       min-height: auto; } }
+  @media screen and (max-width: 575.98px) {
+    .team__list {
+      min-height: 35.625rem;
+      justify-content: flex-start; } }
 
 .team__item {
   width: 24%;
@@ -986,19 +990,19 @@ body {
     transition-timing-function: linear; }
     @media screen and (max-width: 991.98px) {
       .team__item--active .team__info {
-        /* выезд вниз при ХОВЕРЕ */
+        /* выезд вниз при ОТКРЫТИИ */
         transition-property: max-height, opacity;
         transition-duration: 0.25s, 0.25s;
-        transition-delay: 0s, 0.65s;
+        transition-delay: 0s, 0.25s;
         transition-timing-function: linear; } }
   .team__item--active .team__photo {
     padding-bottom: 130%;
     max-height: 400px;
     opacity: 1;
-    /* выезд вниз при ХОВЕРЕ */
+    /* выезд вниз при ОТКРЫТИИ */
     transition-property: max-height, opacity;
     transition-duration: 0.25s, 0.25s;
-    transition-delay: 0s, 0.65s;
+    transition-delay: 0s, 0.25s;
     transition-timing-function: linear; }
 
 .team__info {
@@ -1013,7 +1017,7 @@ body {
     .team__info {
       /* уход наверх */
       transition-property: opacity, max-height;
-      transition-duration: 0.15s, 0.25;
+      transition-duration: 0.15s, 0.15s;
       transition-delay: 0s, 0.15s;
       transition-timing-function: linear; } }
 
@@ -1029,9 +1033,12 @@ body {
       opacity: 0;
       /* уход наверх */
       transition-property: opacity, padding-bottom;
-      transition-duration: 0.15s, 0.25s;
+      transition-duration: 0.15s, 0.15s;
       transition-delay: 0s, 0.15s;
       transition-timing-function: linear; } }
+  @media screen and (max-width: 575.98px) {
+    .team__photo {
+      margin-bottom: 4%; } }
 
 .team__image {
   position: absolute;

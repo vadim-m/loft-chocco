@@ -38,6 +38,11 @@
 
     min-height: auto;
   }
+
+  @include phones {
+    min-height: rem(570);
+    justify-content: flex-start;
+  }
 }
 
 .team__item {
@@ -71,10 +76,10 @@
     transition-timing-function: linear;
 
     @include tablets {
-      /* выезд вниз при ХОВЕРЕ */
+      /* выезд вниз при ОТКРЫТИИ */
       transition-property: max-height, opacity;
       transition-duration: 0.25s, 0.25s;
-      transition-delay: 0s, 0.65s;
+      transition-delay: 0s, 0.25s;
       transition-timing-function: linear;
     }
   }
@@ -84,10 +89,10 @@
     max-height: 400px;
     opacity: 1;
 
-    /* выезд вниз при ХОВЕРЕ */
+    /* выезд вниз при ОТКРЫТИИ */
     transition-property: max-height, opacity;
     transition-duration: 0.25s, 0.25s;
-    transition-delay: 0s, 0.65s;
+    transition-delay: 0s, 0.25s;
     transition-timing-function: linear;
   }
 }
@@ -105,7 +110,7 @@
   @include tablets {
     /* уход наверх */
     transition-property: opacity, max-height;
-    transition-duration: 0.15s, 0.25;
+    transition-duration: 0.15s, 0.15s;
     transition-delay: 0s, 0.15s;
     transition-timing-function: linear;
   }
@@ -126,9 +131,13 @@
 
     /* уход наверх */
     transition-property: opacity, padding-bottom;
-    transition-duration: 0.15s, 0.25s;
+    transition-duration: 0.15s, 0.15s;
     transition-delay: 0s, 0.15s;
     transition-timing-function: linear;
+  }
+
+  @include phones {
+    margin-bottom: 4%;
   }
 }
 

@@ -4,17 +4,20 @@ const fullscreenMenu = document.querySelector(".fullscreen-menu");
 const teamList = document.querySelector(".team__list");
 
 // Функционал Бургер-меню для планшетов и ниже
+//
 burgerBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
+  // переключаем классы у нужным элементов
   burgerBtn.classList.toggle("burger-menu--active");
   fullscreenMenu.classList.toggle("fullscreen-menu--active");
   document.body.classList.toggle("stop-scroll");
 });
 
 // Вертикальный Аккордеон Команды
-// Переменная для переключения активного айтема
-let activeTeamItem;
+//
+// Делаем первый айтем команды активным по умолчанию
+let activeTeamItem = document.querySelector(".team__item");
 
 teamList.addEventListener("click", (e) => {
   // проверка, что мы попали именно на Заголовок с классом team__name
@@ -24,17 +27,18 @@ teamList.addEventListener("click", (e) => {
 
     // проверка есть ли уже у выбранного элемента team__item класс active
     if (listItem.classList.contains("team__item--active")) {
-      // если да, то удаляем его и выходим!
+      // если да, то удаляем его и выходим из функции!
       listItem.classList.remove("team__item--active");
-
       return;
     } else if (activeTeamItem) {
-      // если уже есть открытй элемент, то удадяем у него класс
+      // если уже есть другой открытый элемент, то удадяем у него класс
       activeTeamItem.classList.remove("team__item--active");
     }
-    // а далее делаем активный айтем тот, по которому кликнули
+    // далее делаем активным айтемом тот, по которому кликнули
     activeTeamItem = listItem;
-    // и добавляем ему класс
-    listItem.classList.add("team__item--active");
+    // и добавляем ему класс по таймауту, чтобы прошла анимации закрытия
+    setTimeout(() => {
+      listItem.classList.add("team__item--active");
+    }, 450);
   }
 });
