@@ -3,6 +3,8 @@ const burgerBtn = document.querySelector("#burger-menu");
 const fullscreenMenu = document.querySelector(".fullscreen-menu");
 const teamList = document.querySelector(".team__list");
 const menuList = document.querySelector(".menu-acco__list");
+const reviewsList = document.querySelector(".reviews__list");
+const reviewsTabs = document.querySelector(".reviews__tabs");
 
 // Функционал Бургер-меню для планшетов и ниже
 //
@@ -64,3 +66,34 @@ menuList.addEventListener("click", (e) => {
     activeMenuItem.classList.add("menu-acco__item--active");
   }
 });
+
+// Переключатель отзывов в секции Отзывы
+//
+let activeTabsItem = document.querySelector(".tabs__item");
+
+reviewsTabs.addEventListener("click", (e) => {
+  if (e.target.classList.contains("tabs__image")) {
+    let tabsItem = e.target.parentNode;
+
+    if (tabsItem.classList.contains("tabs__item--active")) {
+      tabsItem.classList.remove("tabs__item--active");
+      return;
+    } else if (activeTabsItem) {
+      activeTabsItem.classList.remove("tabs__item--active");
+    }
+
+    activeTabsItem = tabsItem;
+    activeTabsItem.classList.add("tabs__item--active");
+
+    moveReviewsItem(e.target);
+  }
+});
+
+function moveReviewsItem(target) {
+  let tabIndex = parseInt(target.dataset.tabs);
+  if (tabIndex === 0) {
+    reviewsList.style.left = "0%";
+  } else {
+    reviewsList.style.left = `-${tabIndex * 100}%`;
+  }
+}

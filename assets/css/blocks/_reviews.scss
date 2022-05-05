@@ -14,7 +14,7 @@
   margin-bottom: em(24, 48);
 }
 
-.reviews__wrapper {
+.reviews__content {
   background-color: var(--grey);
   position: relative;
 
@@ -53,10 +53,19 @@
   }
 }
 
+.reviews__wrapper {
+  overflow: hidden;
+}
+
 .reviews__list {
   display: flex;
-  // из-за листьев в правом верхнем углу
+
   position: relative;
+  left: 0%;
+
+  transition: left 0.6s ease-in-out;
+
+  // из-за листьев в правом верхнем углу
   z-index: 5;
 }
 
