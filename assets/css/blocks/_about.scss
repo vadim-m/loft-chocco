@@ -21,6 +21,10 @@
   text-align: center;
 
   margin-bottom: em(24, 48);
+
+  @include phones {
+    margin-bottom: em(12, 48);
+  }
 }
 
 .about__text {
@@ -35,7 +39,7 @@
 
   @include phones {
     line-height: 1.5;
-    margin: 0 auto em(36, 18);
+    margin: 0 auto em(24, 18);
   }
 }
 

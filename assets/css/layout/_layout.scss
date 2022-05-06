@@ -139,6 +139,10 @@ body {
     @include large {
       margin-bottom: em(24, 48);
     }
+
+    @include phones {
+      margin-bottom: em(12, 48);
+    }
   }
 
   &--green {

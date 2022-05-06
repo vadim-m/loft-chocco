@@ -26,18 +26,6 @@
   width: 100%;
   display: flex;
 
-  &--controls {
-    margin-top: rem(40);
-
-    @include tablets {
-      justify-content: center;
-    }
-
-    @include phones {
-      margin-top: rem(20);
-    }
-  }
-
   &:not(:last-child) {
     margin-bottom: em(9, 18);
 
@@ -56,6 +44,19 @@
 
   @include phones {
     margin-bottom: em(7, 14);
+  }
+
+  &--controls {
+    margin-top: rem(40);
+
+    @include tablets {
+      justify-content: center;
+    }
+
+    @include phones {
+      margin-top: rem(16);
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -129,12 +130,14 @@
   resize: none;
   height: rem(180);
 
-  margin-bottom: rem(16);
+  margin-bottom: rem(12);
+
+  @include tablets {
+    margin-bottom: 0;
+  }
 
   @include phones {
     height: rem(80);
-
-    margin-bottom: 0;
   }
 }
 

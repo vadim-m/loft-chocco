@@ -589,6 +589,9 @@ body {
     @media screen and (max-width: 1199.98px) {
       .section-title--black {
         margin-bottom: 0.5em; } }
+    @media screen and (max-width: 575.98px) {
+      .section-title--black {
+        margin-bottom: 0.25em; } }
   .section-title--green {
     color: var(--green-text); }
 
@@ -907,6 +910,9 @@ body {
 .about__title {
   text-align: center;
   margin-bottom: 0.5em; }
+  @media screen and (max-width: 575.98px) {
+    .about__title {
+      margin-bottom: 0.25em; } }
 
 .about__text {
   max-width: 26.25rem;
@@ -921,7 +927,7 @@ body {
   @media screen and (max-width: 575.98px) {
     .about__text {
       line-height: 1.5;
-      margin: 0 auto 2em; } }
+      margin: 0 auto 1.3333333333em; } }
 
 .about__decor {
   position: absolute;
@@ -1244,9 +1250,10 @@ body {
   position: absolute;
   right: 25px;
   top: 25px;
-  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0i0KHQu9C+0LlfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxOCAxOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTggMTg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNjNmM2YzY7fQ0KPC9zdHlsZT4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMi4yLDlsNS4yLTUuMmMwLjgtMC44LDAuOC0yLDAtMi43bC0wLjQtMC40Yy0wLjgtMC44LTItMC44LTIuNywwTDksNS44TDMuOCwwLjZDMy0wLjIsMS44LTAuMiwxLDAuNkwwLjYsMQ0KCWMtMC44LDAuOC0wLjgsMiwwLDIuN0w1LjgsOWwtNS4yLDUuMmMtMC44LDAuOC0wLjgsMiwwLDIuN0wxLDE3LjRjMC44LDAuOCwyLDAuOCwyLjcsMEw5LDEyLjJsNS4yLDUuMmMwLjgsMC44LDIsMC44LDIuNywwbDAuNC0wLjQNCgljMC44LTAuOCwwLjgtMiwwLTIuN0wxMi4yLDl6Ii8+DQo8L3N2Zz4NCg==");
   opacity: 0;
-  z-index: 20; }
+  z-index: 20;
+  cursor: pointer;
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0i0KHQu9C+0LlfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxOCAxOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTggMTg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNjNmM2YzY7fQ0KPC9zdHlsZT4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMi4yLDlsNS4yLTUuMmMwLjgtMC44LDAuOC0yLDAtMi43bC0wLjQtMC40Yy0wLjgtMC44LTItMC44LTIuNywwTDksNS44TDMuOCwwLjZDMy0wLjIsMS44LTAuMiwxLDAuNkwwLjYsMQ0KCWMtMC44LDAuOC0wLjgsMiwwLDIuN0w1LjgsOWwtNS4yLDUuMmMtMC44LDAuOC0wLjgsMiwwLDIuN0wxLDE3LjRjMC44LDAuOCwyLDAuOCwyLjcsMEw5LDEyLjJsNS4yLDUuMmMwLjgsMC44LDIsMC44LDIuNywwbDAuNC0wLjQNCgljMC44LTAuOCwwLjgtMiwwLTIuN0wxMi4yLDl6Ii8+DQo8L3N2Zz4NCg=="); }
 
 .advantages {
   display: flex; }
@@ -1353,12 +1360,18 @@ body {
 .reviews__title {
   z-index: 5;
   margin-bottom: 0.5em; }
+  @media screen and (max-width: 575.98px) {
+    .reviews__title {
+      margin-bottom: 0.25em; } }
 
 .reviews__content {
   background-color: var(--grey);
   position: relative;
   padding: 5%;
   margin-bottom: 2rem; }
+  @media screen and (max-width: 575.98px) {
+    .reviews__content {
+      margin-bottom: 1rem; } }
   .reviews__content::before {
     content: "";
     display: block;
@@ -1422,7 +1435,8 @@ body {
       margin: 5%; } }
   @media screen and (max-width: 575.98px) {
     .review__wrapper-photo {
-      flex-basis: 35%; } }
+      flex-basis: 35%;
+      margin: 0 0 5%; } }
 
 .review__photo {
   position: relative;
@@ -1443,6 +1457,10 @@ body {
     .review__content {
       flex-basis: 100%;
       text-align: center; } }
+  @media screen and (max-width: 575.98px) {
+    .review__content {
+      flex-basis: 80%;
+      padding: 0; } }
 
 .review__title {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
@@ -1452,6 +1470,9 @@ body {
   line-height: 1;
   color: var(--black-text);
   margin-bottom: 1em; }
+  @media screen and (max-width: 575.98px) {
+    .review__title {
+      margin-bottom: 0.5em; } }
 
 .review__text {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
@@ -1461,6 +1482,9 @@ body {
   color: var(--grey-text);
   line-height: 1.3333333333;
   margin-bottom: 1.7777777778em; }
+  @media screen and (max-width: 575.98px) {
+    .review__text {
+      margin-bottom: 0.5em; } }
 
 .review__author {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
@@ -1563,7 +1587,7 @@ body {
     margin-bottom: 1.125em; }
     @media screen and (max-width: 575.98px) {
       .order-form__title {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.25em;
         position: relative; } }
 
 .form__wrapper {
@@ -1587,14 +1611,6 @@ body {
 .form__row {
   width: 100%;
   display: flex; }
-  .form__row--controls {
-    margin-top: 2.5rem; }
-    @media screen and (max-width: 991.98px) {
-      .form__row--controls {
-        justify-content: center; } }
-    @media screen and (max-width: 575.98px) {
-      .form__row--controls {
-        margin-top: 1.25rem; } }
   .form__row:not(:last-child) {
     margin-bottom: 0.5em; }
     @media screen and (max-width: 991.98px) {
@@ -1609,6 +1625,15 @@ body {
   @media screen and (max-width: 575.98px) {
     .form__row {
       margin-bottom: 0.5em; } }
+  .form__row--controls {
+    margin-top: 2.5rem; }
+    @media screen and (max-width: 991.98px) {
+      .form__row--controls {
+        justify-content: center; } }
+    @media screen and (max-width: 575.98px) {
+      .form__row--controls {
+        margin-top: 1rem;
+        margin-bottom: 0; } }
 
 .form__field-name {
   display: inline-block; }
@@ -1661,11 +1686,13 @@ body {
 .form__textarea {
   resize: none;
   height: 11.25rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 0.75rem; }
+  @media screen and (max-width: 991.98px) {
+    .form__textarea {
+      margin-bottom: 0; } }
   @media screen and (max-width: 575.98px) {
     .form__textarea {
-      height: 5rem;
-      margin-bottom: 0; } }
+      height: 5rem; } }
 
 .form__hidden {
   width: 0.1px;
