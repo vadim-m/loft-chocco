@@ -5,11 +5,6 @@
   line-height: lh(24, 21);
   color: var(--black-text);
 
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
   padding: rem(20) 0;
 
   @include phones {

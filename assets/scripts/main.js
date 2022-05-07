@@ -100,3 +100,79 @@ function moveReviewsItem(target) {
     reviewsList.style.left = `-${tabIndex * 100}%`;
   }
 }
+
+// Добавляем карту Yandex.Maps
+//
+// Функция ymaps.ready() будет вызвана, когда
+// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+ymaps.ready(init);
+
+// Массив меток на карте
+const placemarks = [
+  {
+    latitude: 55.752,
+    longitude: 37.576,
+    hintContent: "CHOCCO!",
+    balloonContent: ` 
+                      <span>Магазин Лучших батончиков!</span>
+                      <br>
+                      <span>ул.Новый Арбат, д.31/12</span> 
+    `,
+  },
+  {
+    latitude: 55.7447,
+    longitude: 37.5663,
+    hintContent: "CHOCCO!",
+    balloonContent: ` 
+                      <span>CHOCCO ТЦ Европейский</span>
+                      <br>
+                      <span>площадь Киевского Вокзала, 2</span> 
+    `,
+  },
+  {
+    latitude: 55.7489,
+    longitude: 37.539,
+    hintContent: "CHOCCO!",
+    balloonContent: ` 
+                      <span>CHOCCO Афимол Сити</span>
+                      <br>
+                      <span>Пресненская наб., 2</span> 
+    `,
+  },
+];
+
+function init() {
+  // Создание карты через конструктор
+  const myMap = new ymaps.Map("map", {
+    // Координаты центра карты.
+    // Порядок по умолчанию: «широта, долгота».
+    center: [55.75, 37.556],
+    // Уровень масштабирования. Допустимые значения:
+    // от 0 (весь мир) до 19.
+    zoom: 13,
+    // Элементы интерфейса, оставляем только кнопки зума
+    controls: ["zoomControl"],
+    // Поведение при событиях скролла, кликов и тд., оставляем следующие
+    behaviors: ["dblClickZoom", "drag", "multiTouch"],
+  });
+
+  // Ставим метки на карту при помощи метода forEach
+  placemarks.forEach((item) => {
+    const placemark = new ymaps.Placemark(
+      [item.latitude, item.longitude],
+      {
+        hintContent: item.hintContent,
+        balloonContent: item.balloonContent,
+      },
+      {
+        iconLayout: "default#image",
+        iconImageHref: "./assets/images/contacts/map-icon.png",
+        iconImageSize: [46, 57],
+        // cмещаем иконку, чтобы нижний указатель был на нужном адресе
+        iconImageOffset: [-23, -57],
+      }
+    );
+
+    myMap.geoObjects.add(placemark);
+  });
+}
