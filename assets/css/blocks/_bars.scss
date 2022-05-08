@@ -1,0 +1,14 @@
+.bars {
+  background-color: var(--grey);
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.bars__wrapper {
+  width: 100%;
+}

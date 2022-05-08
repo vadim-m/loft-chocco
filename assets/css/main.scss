@@ -7,6 +7,7 @@
   --white-text: #fff;
   // colors
   --blue: #5fc4d9;
+  --dark-blue: #0eacce;
   --grey: #f6faf9;
   --green: #135a46;
   --white: #fff;
@@ -35,6 +36,8 @@ $phones: 575.98px;
 @import "./blocks/_phone-number.scss";
 @import "./blocks/_burger-menu.scss";
 @import "./blocks/_intro.scss";
+@import "./blocks/_bars.scss";
+@import "./blocks/_slider.scss";
 @import "./blocks/_features.scss";
 @import "./blocks/_about.scss";
 @import "./blocks/_team.scss";

@@ -5,6 +5,7 @@
   --green-text: #135a46;
   --white-text: #fff;
   --blue: #5fc4d9;
+  --dark-blue: #0eacce;
   --grey: #f6faf9;
   --green: #135a46;
   --white: #fff; }
@@ -869,6 +870,102 @@ body {
       right: 0;
       bottom: 0; } }
 
+.bars {
+  background-color: var(--grey); }
+  .bars__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+.bars__wrapper {
+  width: 100%; }
+
+.slider {
+  width: 100%;
+  display: flex;
+  overflow: hidden; }
+
+.slider__item {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0; }
+
+.slider__photo {
+  width: 50%;
+  display: flex;
+  align-items: center; }
+
+.slider__content {
+  width: 50%;
+  padding: 0 5%; }
+
+.slider__compound {
+  width: 5.625rem;
+  height: 5.625rem;
+  background-color: var(--blue);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  color: var(--white-text);
+  fill: var(--white-text);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1.5rem; }
+  .slider__compound:hover {
+    background-color: var(--dark-blue); }
+  .slider__compound-icon {
+    width: 3.375rem;
+    height: 3.375rem;
+    margin-bottom: 4px; }
+  .slider__compound-header {
+    text-transform: uppercase;
+    line-height: 1; }
+
+.slider__title {
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: var(--black-text);
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 1rem; }
+
+.slider__desc {
+  font-size: 1.125rem;
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--grey-text);
+  line-height: 1.3333333333;
+  margin-bottom: 1.5rem; }
+
+.slider__table {
+  font-size: 1.125rem;
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 1.5rem; }
+  .slider__table-row--bold {
+    font-weight: bold; }
+  .slider__table-data {
+    min-width: 9rem; }
+
+.slider__info {
+  display: flex; }
+
+.slider__price {
+  display: inline-block;
+  min-width: 9rem;
+  font-size: 3.75rem;
+  font-family: "Alegreya Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  color: #151515; }
+
 .features {
   display: flex; }
   @media screen and (max-width: 991.98px) {
@@ -931,7 +1028,7 @@ body {
 
 .about__decor {
   position: absolute;
-  right: -3%;
+  left: -3%;
   bottom: -6%; }
   @media screen and (max-width: 575.98px) {
     .about__decor {
