@@ -8,18 +8,49 @@
   width: 100%;
   display: flex;
   flex-shrink: 0;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .slider-cell__photo {
   width: 50%;
   display: flex;
   align-items: center;
+
+  @include tablets {
+    width: 100%;
+    justify-content: center;
+  }
+
+  @include phones {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .slider-cell__content {
   width: 50%;
 
   padding: 0 5%;
+
+  @include tablets {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: rem(16) 0 0;
+  }
+
+  @include phones {
+    max-width: rem(340);
+    margin: 0 auto;
+  }
 }
 
 .slider-cell__compound {
@@ -37,6 +68,24 @@
   cursor: pointer;
 
   margin-bottom: rem(24);
+
+  @include tablets {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: rem(90);
+    left: 0;
+    top: 100%;
+    display: none;
+  }
+
+  &:hover::after {
+    display: block;
+  }
 
   &:hover {
     background-color: var(--dark-blue);
@@ -108,6 +157,15 @@
   line-height: 1.2;
 
   margin-bottom: rem(16);
+
+  @include tablets {
+    font-size: rem(30);
+  }
+
+  @include phones {
+    font-size: rem(26);
+    margin-bottom: 0.5rem;
+  }
 }
 
 .slider-cell__desc {
@@ -117,6 +175,10 @@
   line-height: lh(24, 18);
 
   margin-bottom: rem(24);
+
+  @include phones {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .slider-cell__info {
@@ -124,6 +186,10 @@
   @include alegreya(400);
 
   margin-bottom: rem(24);
+
+  @include phones {
+    margin-bottom: 1rem;
+  }
 
   &-row--bold {
     font-weight: bold;
@@ -146,4 +212,8 @@
   @include alegreya(400);
   line-height: 1;
   color: #151515;
+
+  @include tablets {
+    margin-right: rem(16);
+  }
 }
