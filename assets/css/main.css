@@ -878,33 +878,51 @@ body {
     flex-direction: column;
     justify-content: center; }
 
-.bars__wrapper {
-  width: 100%; }
+.bars-slider {
+  width: 100%;
+  position: relative; }
+
+.bars-slider__controls {
+  position: absolute;
+  width: 1rem;
+  height: 2rem;
+  transform: translateY(-50%);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0i0KHQu9C+0LlfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxNC4yIDI1LjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE0LjIgMjUuNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6IzBEMEUwRjt9DQo8L3N0eWxlPg0KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxNC4yLDEyLjcgMS41LDAgMCwxLjUgMTEuMywxMi43IDAsMjQgMS41LDI1LjUgMTQuMiwxMi43IDE0LjIsMTIuNyAiLz4NCjwvc3ZnPg0K);
+  background-repeat: no-repeat;
+  background-position: center; }
+  .bars-slider__controls-prev {
+    transform: translateY(-50%) rotate(-180deg);
+    top: 50%;
+    right: 100%; }
+  .bars-slider__controls-next {
+    top: 50%;
+    left: 100%; }
 
 .slider {
   width: 100%;
   display: flex;
   overflow: hidden; }
 
-.slider__item {
+.slider-cell {
   width: 100%;
   display: flex;
   flex-shrink: 0; }
 
-.slider__photo {
+.slider-cell__photo {
   width: 50%;
   display: flex;
   align-items: center; }
 
-.slider__content {
+.slider-cell__content {
   width: 50%;
   padding: 0 5%; }
 
-.slider__compound {
+.slider-cell__compound {
+  display: inline-flex;
+  position: relative;
   width: 5.625rem;
   height: 5.625rem;
   background-color: var(--blue);
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
@@ -913,17 +931,48 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 1.5rem; }
-  .slider__compound:hover {
+  .slider-cell__compound:hover {
     background-color: var(--dark-blue); }
-  .slider__compound-icon {
+  .slider-cell__compound:hover .slider-cell__compound-list {
+    opacity: 0.95;
+    pointer-events: auto;
+    cursor: auto; }
+  .slider-cell__compound-icon {
     width: 3.375rem;
     height: 3.375rem;
     margin-bottom: 4px; }
-  .slider__compound-header {
+  .slider-cell__compound-title {
     text-transform: uppercase;
     line-height: 1; }
+  .slider-cell__compound-list {
+    display: block;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 5.625rem;
+    pointer-events: none;
+    font-size: 1rem;
+    font-family: "Alegreya Sans", Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--black-text);
+    fill: var(--black-text);
+    background-color: var(--white);
+    opacity: 0;
+    border-radius: 5px;
+    padding: 10% 25%; }
+  .slider-cell__compound-row:not(:last-child) {
+    margin-bottom: 8px; }
+  .slider-cell__compound-data {
+    white-space: nowrap; }
+    .slider-cell__compound-data:nth-child(2) {
+      padding: 0 30px; }
+  .slider-cell__compound-pic {
+    width: 2.25rem;
+    height: 2.25rem; }
 
-.slider__title {
+.slider-cell__title {
   font-family: "Alegreya Sans", Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -933,7 +982,7 @@ body {
   line-height: 1.2;
   margin-bottom: 1rem; }
 
-.slider__desc {
+.slider-cell__desc {
   font-size: 1.125rem;
   font-family: "Alegreya Sans", Helvetica, sans-serif;
   font-style: normal;
@@ -942,21 +991,21 @@ body {
   line-height: 1.3333333333;
   margin-bottom: 1.5rem; }
 
-.slider__table {
+.slider-cell__info {
   font-size: 1.125rem;
   font-family: "Alegreya Sans", Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   margin-bottom: 1.5rem; }
-  .slider__table-row--bold {
+  .slider-cell__info-row--bold {
     font-weight: bold; }
-  .slider__table-data {
+  .slider-cell__info-data {
     min-width: 9rem; }
 
-.slider__info {
+.slider-cell__footer {
   display: flex; }
 
-.slider__price {
+.slider-cell__price {
   display: inline-block;
   min-width: 9rem;
   font-size: 3.75rem;

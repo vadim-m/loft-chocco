@@ -4,29 +4,30 @@
   overflow: hidden;
 }
 
-.slider__item {
+.slider-cell {
   width: 100%;
   display: flex;
   flex-shrink: 0;
 }
 
-.slider__photo {
+.slider-cell__photo {
   width: 50%;
   display: flex;
   align-items: center;
 }
 
-.slider__content {
+.slider-cell__content {
   width: 50%;
 
   padding: 0 5%;
 }
 
-.slider__compound {
+.slider-cell__compound {
+  display: inline-flex;
+  position: relative;
   width: rem(90);
   height: rem(90);
   background-color: var(--blue);
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
@@ -41,6 +42,12 @@
     background-color: var(--dark-blue);
   }
 
+  &:hover &-list {
+    opacity: 0.95;
+    pointer-events: auto;
+    cursor: auto;
+  }
+
   &-icon {
     width: rem(54);
     height: rem(54);
@@ -48,13 +55,52 @@
     margin-bottom: 4px;
   }
 
-  &-header {
+  &-title {
     text-transform: uppercase;
     line-height: 1;
   }
+
+  &-list {
+    display: block;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    left: rem(90);
+    pointer-events: none;
+
+    font-size: rem(16);
+    @include alegreya(500);
+    line-height: lh(24, 16);
+    color: var(--black-text);
+    fill: var(--black-text);
+    background-color: var(--white);
+    opacity: 0;
+    border-radius: 5px;
+
+    padding: 10% 25%;
+  }
+
+  &-row {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &-data {
+    white-space: nowrap;
+
+    &:nth-child(2) {
+      padding: 0 30px;
+    }
+  }
+
+  &-pic {
+    width: rem(36);
+    height: rem(36);
+  }
 }
 
-.slider__title {
+.slider-cell__title {
   @include alegreya(700);
   font-size: rem(36);
   color: var(--black-text);
@@ -64,7 +110,7 @@
   margin-bottom: rem(16);
 }
 
-.slider__desc {
+.slider-cell__desc {
   font-size: rem(18);
   @include alegreya(400);
   color: var(--grey-text);
@@ -73,7 +119,7 @@
   margin-bottom: rem(24);
 }
 
-.slider__table {
+.slider-cell__info {
   font-size: rem(18);
   @include alegreya(400);
 
@@ -88,11 +134,11 @@
   }
 }
 
-.slider__info {
+.slider-cell__footer {
   display: flex;
 }
 
-.slider__price {
+.slider-cell__price {
   display: inline-block;
   min-width: rem(144);
 

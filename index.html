@@ -177,83 +177,213 @@
 
       <section class="section bars">
         <div class="container bars__container">
-          <div class="bars__wrapper">
-            <ul class="bars__slider slider">
-              <li class="slider__item">
+          <div class="bars-slider">
+            <button class="bars-slider__controls  bars-slider__controls-prev"></button>
+            <ul class="slider">
+              <li class="slider-cell">
 
-                <div class="slider__photo">
+                <div class="slider-cell__photo">
                   <img src="./assets/images/bars/product-1.webp" alt="Картинка шоколадного батончика"
-                    class="slider__image">
+                    class="slider-cell__image">
                 </div>
 
-                <div class="slider__content">
-                  <div class="slider__compound">
-                    <svg class=" icon slider__compound-icon">
+                <div class="slider-cell__content">
+
+
+                  <div class="slider-cell__compound">
+                    <svg class=" icon slider-cell__compound-icon">
                       <use xlink:href="./assets/images/icons/sprite.svg#chocolate-bar"></use>
                     </svg>
-                    <h4 class="slider__compound-header">Состав</h4>
+                    <h4 class="slider-cell__compound-title">Состав</h4>
+
+                    <table class="slider-cell__compound-list">
+                      <tbody>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#grape"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Виноград</td>
+                          <td class="slider-cell__compound-data">25г</td>
+                        </tr>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#nut"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Грецкий орех</td>
+                          <td class="slider-cell__compound-data">32г</td>
+                        </tr>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#almond"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Кунжутное семя</td>
+                          <td class="slider-cell__compound-data">20г</td>
+                        </tr>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#powder"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Сухое молоко</td>
+                          <td class="slider-cell__compound-data">10г</td>
+                        </tr>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#apitherapy"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Зам-тель сахара</td>
+                          <td class="slider-cell__compound-data">4г</td>
+                        </tr>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#beans"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Какао бобы</td>
+                          <td class="slider-cell__compound-data">3г</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <h2 class="slider__title">Батончик “Гранола виноград”</h2>
-                  <div class="slider__desc">
+
+                  <h2 class="slider-cell__title">Батончик “Гранола виноград”</h2>
+
+                  <div class="slider-cell__desc">
                     Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко,
                     заменитель сахара и какао бобы.
                   </div>
-                  <table class="slider__table">
-                    <tbody class="slider__table-body">
-                      <tr class="slider__table-row">
-                        <td class="slider__table-data">Калорийность</td>
-                        <td class="slider__table-data">Вес </td>
+                  <table class="slider-cell__info">
+                    <tbody>
+                      <tr class="slider-cell__info-row">
+                        <td class="slider-cell__info-data">Калорийность</td>
+                        <td class="slider-cell__info-data">Вес </td>
                       </tr>
-                      <tr class="slider__table-row slider__table-row--bold">
-                        <td class="slider__table-data">110 ккал</td>
-                        <td class="slider__table-data">95 грамм</td>
+                      <tr class="slider-cell__info-row slider-cell__info-row--bold">
+                        <td class="slider-cell__info-data">110 ккал</td>
+                        <td class="slider-cell__info-data">95 грамм</td>
                       </tr>
                     </tbody>
                   </table>
-                  <div class="slider__info">
-                    <span class="slider__price">140 ₽</span><button class="btn btn--green">заказать</button>
+                  <div class="slider-cell__footer">
+                    <span class="slider-cell__price">140 ₽</span><button
+                      class="btn btn--green slider-cell__btn">заказать</button>
                   </div>
                 </div>
 
               </li>
-              <li class="slider__item">
+              <li class="slider-cell">
 
-                <div class="slider__photo">
-                  <img src="./assets/images/bars/product-1.webp" alt="Картинка шоколадного батончика"
-                    class="slider__image">
+                <div class="slider-cell__photo">
+                  <img src="./assets/images/bars/product-2.webp" alt="Картинка шоколадного батончика"
+                    class="slider-cell__image">
                 </div>
 
-                <div class="slider__content">
-                  <div class="slider__compound">
-                    <svg class=" icon slider__compound-icon">
+                <div class="slider-cell__content">
+
+
+                  <div class="slider-cell__compound">
+                    <svg class=" icon slider-cell__compound-icon">
                       <use xlink:href="./assets/images/icons/sprite.svg#chocolate-bar"></use>
                     </svg>
-                    <h4 class="slider__compound-header">Состав</h4>
+                    <h4 class="slider-cell__compound-title">Состав</h4>
+
+                    <table class="slider-cell__compound-list">
+                      <tbody>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#grape"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Виноград</td>
+                          <td class="slider-cell__compound-data">25г</td>
+                        </tr>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#nut"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Грецкий орех</td>
+                          <td class="slider-cell__compound-data">32г</td>
+                        </tr>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#almond"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Кунжутное семя</td>
+                          <td class="slider-cell__compound-data">20г</td>
+                        </tr>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#powder"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Сухое молоко</td>
+                          <td class="slider-cell__compound-data">10г</td>
+                        </tr>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#apitherapy"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Зам-тель сахара</td>
+                          <td class="slider-cell__compound-data">4г</td>
+                        </tr>
+                        <tr class="slider-cell__compound-row">
+                          <td class="slider-cell__compound-data">
+                            <svg class="slider-cell__compound-pic">
+                              <use xlink:href="./assets/images/icons/sprite.svg#beans"></use>
+                            </svg>
+                          </td>
+                          <td class="slider-cell__compound-data">Какао бобы</td>
+                          <td class="slider-cell__compound-data">3г</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <h2 class="slider__title">Батончик “Гранола виноград”</h2>
-                  <div class="slider__desc">
+
+                  <h2 class="slider-cell__title">Батончик “Гранола виноград”</h2>
+
+                  <div class="slider-cell__desc">
                     Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко,
                     заменитель сахара и какао бобы.
                   </div>
-                  <table class="slider__table">
-                    <tbody class="slider__table-body">
-                      <tr class="slider__table-row">
-                        <td class="slider__table-data">Калорийность</td>
-                        <td class="slider__table-data">Вес </td>
+                  <table class="slider-cell__info">
+                    <tbody>
+                      <tr class="slider-cell__info-row">
+                        <td class="slider-cell__info-data">Калорийность</td>
+                        <td class="slider-cell__info-data">Вес </td>
                       </tr>
-                      <tr class="slider__table-row slider__table-row--bold">
-                        <td class="slider__table-data">110 ккал</td>
-                        <td class="slider__table-data">95 грамм</td>
+                      <tr class="slider-cell__info-row slider-cell__info-row--bold">
+                        <td class="slider-cell__info-data">110 ккал</td>
+                        <td class="slider-cell__info-data">95 грамм</td>
                       </tr>
                     </tbody>
                   </table>
-                  <div class="slider__info">
-                    <span class="slider__price">140 ₽</span><button class="btn btn--green">заказать</button>
+                  <div class="slider-cell__footer">
+                    <span class="slider-cell__price">140 ₽</span><button
+                      class="btn btn--green slider-cell__btn">заказать</button>
                   </div>
                 </div>
 
               </li>
             </ul>
+            <button class="bars-slider__controls  bars-slider__controls-next"></button>
           </div>
         </div>
       </section>
