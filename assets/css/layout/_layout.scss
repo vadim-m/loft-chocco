@@ -1,6 +1,6 @@
 html,
 body {
-  min-height: 100vh;
+  height: 100vh;
   box-sizing: border-box;
 }
 
@@ -71,7 +71,6 @@ button {
 }
 
 body {
-  min-height: 100vh;
   font-family: "Alegreya Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.42;
@@ -83,7 +82,7 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
   overflow: hidden;
 
   position: relative;
@@ -107,7 +106,12 @@ body {
 }
 
 .content {
-  flex-grow: 1;
+  height: 100%;
+
+  transition: transform 1s;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
 }
 
 .section {

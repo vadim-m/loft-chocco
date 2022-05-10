@@ -176,3 +176,71 @@ function init() {
     myMap.geoObjects.add(placemark);
   });
 }
+
+// OneScrollPage
+//
+// Все секции страницы и секция, которую показываем
+const sections = $(".section");
+const displaySection = $(".content");
+// Изначально запрещаем скролл, таким образом реализуем выполнение скролла
+// на событие колеса мыши "wheel" только один раз
+let isScroll = false;
+
+// Движение секции
+function performTransition(sectionEq) {
+  // Проверяем разрещен скролл или нет, если да (в момент скролла) - выходим
+  if (isScroll) return;
+  // Если не сколлим в данный момент, то разрешаем скролл
+  isScroll = true;
+  const position = `${sectionEq * -100}%`;
+
+  // Добавляем класс section--active отображаемой секции
+  // у братье проверяем у кого класс и удаляем его
+  sections
+    .eq(sectionEq)
+    .addClass("section--active")
+    .siblings()
+    .removeClass("section--active");
+
+  // Сдвигаем на нужное значаение по вертикали
+  displaySection.css({
+    transform: `translateY(${position})`,
+  });
+
+  // delay: 1300 = 1000(transition property) + 300(инерция браузеров)
+  const transitionDuration = parseInt($(".content").css("transition-duration"));
+  const browsersScrollInertia = 300;
+  const delay = transitionDuration + browsersScrollInertia;
+
+  // По задержке запрещаем скролл. Таким образом исключаем
+  // инерцию на тачпадах и гиперпрокрутку на движение колеса
+  setTimeout(() => {
+    isScroll = false;
+  }, delay);
+}
+
+function scrollToSection(direction) {
+  const activeSection = sections.filter(".section--active");
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  // проверяем направление и существует ли вообще секция
+  // в jQuery можно сделать это, проверив длину объекта через length
+  if (direction === "next" && nextSection.length) {
+    performTransition(nextSection.index());
+  } else if (direction === "prev" && prevSection.length) {
+    performTransition(prevSection.index());
+  }
+}
+
+$(".wrapper").on("wheel", (e) => {
+  const deltaY = e.originalEvent.deltaY;
+
+  if (deltaY > 0) {
+    scrollToSection("next");
+  }
+
+  if (deltaY < 0) {
+    scrollToSection("prev");
+  }
+});
