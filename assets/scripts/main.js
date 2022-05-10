@@ -244,3 +244,17 @@ $(".wrapper").on("wheel", (e) => {
     scrollToSection("prev");
   }
 });
+
+// Скролл при помощи кнопок на клавиатуре
+$(document).on("keydown", (e) => {
+  switch (e.keyCode) {
+    // клавиша вниз
+    case 40:
+      scrollToSection("next");
+      break;
+    // клавиша вверх
+    case 38:
+      scrollToSection("prev");
+      break;
+  }
+});
