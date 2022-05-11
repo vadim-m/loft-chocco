@@ -216,9 +216,9 @@ function performTransition(sectionEq) {
   });
 
   // delay: 1300 = 1000(transition property) + 300(инерция браузеров)
-  const transitionDuration = parseInt($(".content").css("transition-duration")); // 1s
+  const transitionDuration = parseInt($(".content").css("transition-duration")); // 0.7s
   const browsersScrollInertia = 0.3; // 0.3s
-  const delay = transitionDuration + browsersScrollInertia; // 1.3s
+  const delay = transitionDuration + browsersScrollInertia; // 1s
 
   // По задержке запрещаем скролл. Таким образом исключаем
   // инерцию на тачпадах и гиперпрокрутку на движение колеса
@@ -255,6 +255,13 @@ $(".wrapper").on("wheel", (e) => {
   }
 });
 
+// Запрет стандартного события touchmove
+// чтобы в мобильных safari не было лагов (дерганий)
+// вообще не очень стратегия как по мне
+$(".wrapper").on("touchmove", (e) => {
+  e.preventDefault();
+});
+
 // Скролл при помощи кнопок на клавиатуре
 $(document).on("keydown", (e) => {
   switch (e.keyCode) {
@@ -281,4 +288,20 @@ $("[data-scroll-ndx]").on("click", (e) => {
   const targetIndex = $(e.currentTarget).attr("data-scroll-ndx");
 
   performTransition(targetIndex);
+});
+
+// Touchswipe - jquery plugin to be used on touch devices
+$(window).swipe({
+  swipe: function (
+    event,
+    direction,
+    distance,
+    duration,
+    fingerCount,
+    fingerData
+  ) {
+    const nextOrPrev = direction === "up" ? "next" : "prev";
+
+    performTransition(nextOrPrev);
+  },
 });
