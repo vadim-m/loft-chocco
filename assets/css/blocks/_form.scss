@@ -130,7 +130,11 @@
   resize: none;
   height: rem(180);
 
-  margin-bottom: rem(12);
+  margin-bottom: rem(13);
+
+  @include large {
+    margin-bottom: rem(16);
+  }
 
   @include tablets {
     margin-bottom: 0;

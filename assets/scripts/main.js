@@ -14,7 +14,6 @@ burgerBtn.addEventListener("click", (e) => {
   // переключаем классы у нужным элементов
   burgerBtn.classList.toggle("burger-menu--active");
   fullscreenMenu.classList.toggle("fullscreen-menu--active");
-  document.body.classList.toggle("stop-scroll");
 });
 
 // Вертикальный Аккордеон Команды
@@ -208,15 +207,15 @@ function performTransition(sectionEq) {
   });
 
   // delay: 1300 = 1000(transition property) + 300(инерция браузеров)
-  const transitionDuration = parseInt($(".content").css("transition-duration"));
-  const browsersScrollInertia = 300;
+  const transitionDuration = parseInt($(".content").css("transition-duration")); // 1s
+  const browsersScrollInertia = 0.3; // 0.3s
   const delay = transitionDuration + browsersScrollInertia;
 
   // По задержке запрещаем скролл. Таким образом исключаем
   // инерцию на тачпадах и гиперпрокрутку на движение колеса
   setTimeout(() => {
     isScroll = false;
-  }, delay);
+  }, delay * 1000);
 }
 
 function scrollToSection(direction) {
@@ -228,6 +227,7 @@ function scrollToSection(direction) {
   // в jQuery можно сделать это, проверив длину объекта через length
   if (direction === "next" && nextSection.length) {
     performTransition(nextSection.index());
+    console.log(nextSection.index());
   } else if (direction === "prev" && prevSection.length) {
     performTransition(prevSection.index());
   }
@@ -257,4 +257,18 @@ $(document).on("keydown", (e) => {
       scrollToSection("prev");
       break;
   }
+});
+
+// Скролл при помощи кликов по элементам меню
+$("[data-scroll-ndx]").on("click", (e) => {
+  e.preventDefault();
+
+  // Удаляем классы, если открыт элемент fullscreen-menu
+  burgerBtn.classList.remove("burger-menu--active");
+  fullscreenMenu.classList.remove("fullscreen-menu--active");
+
+  // Записываем численное значение индекса
+  const targetIndex = $(e.currentTarget).attr("data-scroll-ndx");
+
+  performTransition(targetIndex);
 });

@@ -6,8 +6,9 @@
   display: flex;
   align-items: center;
 
-  &:hover {
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+  &__tel:hover,
+  &__tel:focus {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.35));
   }
 
   &__icon {

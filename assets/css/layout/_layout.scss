@@ -168,7 +168,8 @@ body {
 
   transition: all 0.2s linear;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--green);
     color: var(--white-text);
   }
@@ -178,7 +179,8 @@ body {
     color: var(--white-text);
   }
 
-  &--green:hover {
+  &--green:hover,
+  &--green:focus {
     background-color: var(--white);
     color: var(--green-text);
   }

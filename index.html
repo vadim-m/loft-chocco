@@ -18,8 +18,6 @@
 
     <main class="content">
 
-
-
       <section class="section intro section--active">
         <header class="header">
           <div class="container header__container">
@@ -28,13 +26,14 @@
             </div>
             <nav class="header__menu menu">
               <ul class="menu__list">
-                <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Батончики</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Меню</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+                <li class="menu__item"><a href="#" data-scroll-ndx="1" class="menu__link">О нас</a></li>
+                <li class="menu__item"><a href="#" data-scroll-ndx="2" class="menu__link">Батончики</a></li>
+                <li class="menu__item"><a href="#" data-scroll-ndx="3" class="menu__link">Команда</a></li>
+                <li class="menu__item"><a href="#" data-scroll-ndx="4" class="menu__link">Меню</a></li>
+                <li class="menu__item"><a href="#" data-scroll-ndx="5" class="menu__link">Отзывы</a></li>
+                <li class="menu__item"><a href="#" data-scroll-ndx="6" class="menu__link">Как мы работаем</a></li>
+                <li class="menu__item"><a href="#" data-scroll-ndx="7" class="menu__link">Заказать</a></li>
+                <li class="menu__item"><a href="#" data-scroll-ndx="8" class="menu__link">Контакты</a></li>
               </ul>
             </nav>
             <div class="header__contacts phone-number">
@@ -60,7 +59,7 @@
             <div class="intro__text">
               <h1 class="section-title intro__title">Натуральные шоколадные батончики</h1>
               <div class="intro__desc">Наши баточники идеально подходят для тех, кто следит за своим здоровьем.</div>
-              <button type="button" class="btn intro__button">Заказать</button>
+              <button type="button" data-scroll-ndx="7" class="btn intro__button">Заказать</button>
             </div>
 
             <div class="intro__features features">
@@ -99,8 +98,6 @@
               </div>
             </div>
           </div>
-
-
 
         </div>
       </section>
@@ -792,19 +789,34 @@
 
     </main>
 
+
   </div>
   <div class="fullscreen-menu">
     <nav class="menu">
       <ul class="menu__list menu__list--vertical">
-        <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Батончики</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Меню</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+        <li class="menu__item"><a href="#" data-scroll-ndx="1" class="menu__link">О нас</a></li>
+        <li class="menu__item"><a href="#" data-scroll-ndx="2" class="menu__link">Батончики</a></li>
+        <li class="menu__item"><a href="#" data-scroll-ndx="3" class="menu__link">Команда</a></li>
+        <li class="menu__item"><a href="#" data-scroll-ndx="4" class="menu__link">Меню</a></li>
+        <li class="menu__item"><a href="#" data-scroll-ndx="5" class="menu__link">Отзывы</a></li>
+        <li class="menu__item"><a href="#" data-scroll-ndx="6" class="menu__link">Как мы работаем</a></li>
+        <li class="menu__item"><a href="#" data-scroll-ndx="7" class="menu__link">Заказать</a></li>
+        <li class="menu__item"><a href="#" data-scroll-ndx="8" class="menu__link">Контакты</a></li>
       </ul>
     </nav>
+  </div>
+  <div class="dots">
+    <ul class="dots__list">
+      <li class="dots__item"><a href="#" data-scroll-ndx="0" class="dots__link active"></a></li>
+      <li class="dots__item"><a href="#" data-scroll-ndx="1" class="dots__link"></a></li>
+      <li class="dots__item"><a href="#" data-scroll-ndx="2" class="dots__link"></a></li>
+      <li class="dots__item"><a href="#" data-scroll-ndx="3" class="dots__link"></a></li>
+      <li class="dots__item"><a href="#" data-scroll-ndx="4" class="dots__link"></a></li>
+      <li class="dots__item"><a href="#" data-scroll-ndx="5" class="dots__link"></a></li>
+      <li class="dots__item"><a href="#" data-scroll-ndx="6" class="dots__link"></a></li>
+      <li class="dots__item"><a href="#" data-scroll-ndx="7" class="dots__link"></a></li>
+      <li class="dots__item"><a href="#" data-scroll-ndx="8" class="dots__link"></a></li>
+    </ul>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="./assets/scripts/main.js"></script>

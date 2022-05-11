@@ -25,12 +25,9 @@
   }
 }
 
-.menu__item {
-  &:hover {
-    color: var(--green-text);
-
-    @include tablets {
-      color: #54a791;
-    }
+.menu__link {
+  &:hover,
+  &:focus {
+    color: #dee1c3;
   }
 }
