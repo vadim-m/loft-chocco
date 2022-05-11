@@ -302,6 +302,6 @@ $(window).swipe({
   ) {
     const nextOrPrev = direction === "up" ? "next" : "prev";
 
-    performTransition(nextOrPrev);
+    scrollToSection(nextOrPrev);
   },
 });
