@@ -185,6 +185,15 @@ const displaySection = $(".content");
 // на событие колеса мыши "wheel" только один раз
 let isScroll = false;
 
+// Смена активного класса для точек dots
+function switchActiveDots(activeIndex) {
+  $(".dots__item")
+    .eq(activeIndex)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
+}
+
 // Движение секции
 function performTransition(sectionEq) {
   // Проверяем разрещен скролл или нет, если да (в момент скролла) - выходим
@@ -209,12 +218,13 @@ function performTransition(sectionEq) {
   // delay: 1300 = 1000(transition property) + 300(инерция браузеров)
   const transitionDuration = parseInt($(".content").css("transition-duration")); // 1s
   const browsersScrollInertia = 0.3; // 0.3s
-  const delay = transitionDuration + browsersScrollInertia;
+  const delay = transitionDuration + browsersScrollInertia; // 1.3s
 
   // По задержке запрещаем скролл. Таким образом исключаем
   // инерцию на тачпадах и гиперпрокрутку на движение колеса
   setTimeout(() => {
     isScroll = false;
+    switchActiveDots(sectionEq);
   }, delay * 1000);
 }
 
@@ -259,7 +269,7 @@ $(document).on("keydown", (e) => {
   }
 });
 
-// Скролл при помощи кликов по элементам меню
+// Скролл при помощи кликов по элементам меню и кнопкам dots
 $("[data-scroll-ndx]").on("click", (e) => {
   e.preventDefault();
 

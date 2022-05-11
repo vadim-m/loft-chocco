@@ -2092,6 +2092,10 @@ input:checked + .form__fake-checkbox::after {
     border: 1px solid var(--green);
     width: 1.15rem;
     height: 1.15rem; }
+  .dots__item.active .dots__link {
+    border: 1px solid var(--green);
+    width: 1.15rem;
+    height: 1.15rem; }
 
 .dots__link {
   display: block;
@@ -2104,9 +2108,5 @@ input:checked + .form__fake-checkbox::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
-  .dots__link.active {
-    border: 1px solid var(--green);
-    width: 1.15rem;
-    height: 1.15rem; }
 
 /*# sourceMappingURL=main.css.map */
